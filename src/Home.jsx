@@ -1,23 +1,24 @@
-import { useState, useEffect } from "react";
-import { FetchedCars } from "./services/FetchedCars.service.js";
+// import { useState, useEffect } from "react";
+// import { FetchedCars } from "./services/FetchedCars.service.js";
 import { Link } from "react-router-dom";
+import CarList from "./components/CarList";
 
 const Home = () => {
 
-  const [getCars, setCars] = useState([]);
+  // const [getCars, setCars] = useState([]);
 
-  useEffect(() => {
-    async function Cars() {
-      try {
-        const carData = await FetchedCars();
-        setCars(carData);
-      } catch (error) {
-        console.error(error);
-      }
-    }
+  // useEffect(() => {
+  //   async function Cars() {
+  //     try {
+  //       const carData = await FetchedCars();
+  //       setCars(carData);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
 
-    Cars();
-  }, []);
+  //   Cars();
+  // }, []);
 
   return (
     <>
@@ -46,7 +47,7 @@ const Home = () => {
 
             <div className="mt-8 flex flex-wrap gap-4 text-center">
               <a
-                href="#"
+                href=".list"
                 className="inline-block shrink-0 rounded-md border border-orange-red bg-orange-red px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
               >
                 See our collection
@@ -67,39 +68,9 @@ const Home = () => {
         Embark on Your Journey of Luxury and Performance: Discover Your Perfect Ride with Us.
       </p>
 
-      {/* {getCars.map((car) => (
-        <a href="#" className="group relative block my-12">
-          <div className="relative h-[350px] sm:h-[450px] transition-all">
-            <img
-              src={car.imgLinkOne}
-              alt="carImage"
-              className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
-            />
-
-            <img
-              src={car.imgLinkTwo}
-              alt="carImage"
-              className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
-            />
-          </div>
-
-          <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-            <h3 className="text-xl font-medium text-white">{car.make} {car.model}</h3>
-
-            <p className="mt-1.5 max-w-[40ch] text-xs text-white">
-              {car.year} - {car.assembledIn}
-              Registered In {car.registeredIn}
-            </p>
-
-            <span
-              className="mt-3 inline-block rounded-md bg-orange-red px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-            >
-              Learn More
-            </span>
-          </div>
-        </a>
-
-      ))} */}
+      <div className="list">
+      <CarList />
+      </div>
     </>
   );
 };
