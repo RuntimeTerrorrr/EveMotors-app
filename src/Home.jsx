@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FetchedCars } from "./services/FetchedCars.service.js";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -51,12 +52,14 @@ const Home = () => {
                 See our collection
               </a>
 
-              <a
-                href="/register"
+              <Link to="/register">
+                <a
+                href=""
                 class="block w-full rounded bg-white/75 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto"
               >
                 Sign Up
-              </a>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
