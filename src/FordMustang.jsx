@@ -1,11 +1,14 @@
 import ModelViewer from "./components/ModelViewer.jsx";
-let Url= '/toyota_supra_a80_1993/scene.gltf'
+let Url= '/ford_mustang_1965/scene.gltf';
 
 const Mustang = () => {
+    const fixedScale = [3, 3, 3]; // Adjust the scale as needed
+    const fixedTarget = [0, 0, 0]; // Adjust the target as needed
+  
     return (
         <>
             <div className="h-screen w-full">
-            <ModelViewer modelUrl={Url}/>
+            <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
 
             </div>
 

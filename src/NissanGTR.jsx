@@ -1,11 +1,13 @@
 import ModelViewer from "./components/ModelViewer.jsx";
-let Url= '/toyota_supra_a80_1993/scene.gltf'
+let Url= '/nissan_skyline_r34_gt-r/scene.gltf'
 
 const GTR = () => {
+    const fixedScale = [1.5, 1.5, 1.5]; // Adjust the scale as needed
+    const fixedTarget = [2.5, 1.8, 1.5]; // Adjust the target as needed
     return (
         <>
             <div className="">
-            <ModelViewer modelUrl={Url}/>
+            <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
 
             </div>
 

@@ -2,11 +2,13 @@ import ModelViewer from "./components/ModelViewer.jsx";
 let Url= '/toyota_supra_a80_1993/scene.gltf'
 
 const Supra = () => {
+    const fixedScale = [0.4, 0.4, 0.4]; // Adjust the scale as needed
+    const fixedTarget = [0, 0, 0]; // Adjust the target as needed
     return (
         <>
             <div className="h-screen w-full">
 
-            <ModelViewer modelUrl={Url}/>
+            <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
 
             </div>
 
