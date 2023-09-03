@@ -11,13 +11,13 @@ import AddACar from './AddACar.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename='/evemotors-app.vercel.app'>
         <Routes>
-          <Route path="evemotors-app.vercel.app/login" element={<Login />} />
-          <Route path="evemotors-app.vercel.app/register" element={<SimpleRegistrationForm />} />
-          <Route path="evemotors-app.vercel.app/" element={<Home />} />
-          <Route path="evemotors-app.vercel.app/dashboard" element={<FormDashboard />} />
-          <Route path="evemotors-app.vercel.app/addacar" element={<AddACar />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<SimpleRegistrationForm />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<FormDashboard />} />
+          <Route path="/addacar" element={<AddACar />} />
         </Routes>
       </BrowserRouter>
   </React.StrictMode>,
