@@ -11,7 +11,7 @@ import AddACar from './AddACar.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <BrowserRouter basename='/evemotors-app.vercel.app'>
+      <BrowserRouter >
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<SimpleRegistrationForm />} />

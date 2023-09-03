@@ -50,6 +50,13 @@ const Home = () => {
               >
                 See our collection
               </a>
+
+              <a
+                href="/register"
+                class="block w-full rounded bg-white/75 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto"
+              >
+                Sign Up
+              </a>
             </div>
           </div>
         </div>
