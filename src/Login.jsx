@@ -16,9 +16,9 @@ const Login = () => {
         formdata.append("password", password);
 
         UserSignIn(formdata)
-            .then((process) => {
-                if (process.data.token) {
-                    localStorage.setItem("token", process.data.token);
+            .then((data) => {
+                if (data.token) {
+                    localStorage.setItem("token", data.token);
                 }
                 navigate("/dashboard");
 
