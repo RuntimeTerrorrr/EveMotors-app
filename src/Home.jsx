@@ -26,7 +26,7 @@ const Home = () => {
         className="relative bg-[url(https://images.unsplash.com/photo-1611858246382-da4877c6476d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80)] bg-cover bg-center bg-no-repeat"
       >
         <div
-          className="absolute inset-0 bg-gray-50 sm:bg-transparent sm:from-gray-50 sm:to-gray-50 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+          className="absolute inset-0 bg-gray-50 sm:from-gray-50 sm:to-gray-50 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
         ></div>
 
         <div
