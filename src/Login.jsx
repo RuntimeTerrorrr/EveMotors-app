@@ -1,7 +1,7 @@
 import Logo from './assets/Logo/logoBlack.png'
 import UserSignIn from './services/UserSignIn.service.js';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -96,7 +96,7 @@ const Login = () => {
 
                             <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                 Not a member? {' '}
-                                <a href="register" className="text-gray-700 underline">Sign up</a>.
+                                <Link to="login" className="text-gray-700">Sign up</Link>
                             </p>
                         </div>
                     </form>

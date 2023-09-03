@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 
 const FormDashboard = () => {
-    
+
 
     return (
         <>
@@ -31,19 +31,12 @@ const FormDashboard = () => {
                         </p>
 
                         <div class="mt-8 flex flex-wrap gap-4 text-center">
-                            <a
-                                href="addacar"
-                                class="inline-block shrink-0 rounded-md border border-orange-red bg-orange-red px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
-                            >
-                                Add a car
-                            </a>
 
-                            <a
-                                href="/"
-                                class="block w-full rounded bg-white/75 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto"
-                            >
-                                Back to Home
-                            </a>
+                            <Link to="/addacar" class="inline-block shrink-0 rounded-md border border-orange-red bg-orange-red px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red">
+                                Add a car</Link>
+
+                            <Link to="/" class="block w-full rounded bg-white/75 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto">
+                                Back to Home</Link>
                         </div>
                     </div>
                 </div>

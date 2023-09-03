@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from './assets/Logo/logoWhite.png'
 import LogoV2 from './assets/Logo/logoBlack.png'
 import UserRegistration from "./services/UserRegistration.service.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 export default function SimpleRegistrationForm() {
@@ -28,7 +28,7 @@ export default function SimpleRegistrationForm() {
         console.error(error);
       });
 
-      navigate("/login");
+    navigate("/login");
   };
 
   return (
@@ -168,7 +168,7 @@ export default function SimpleRegistrationForm() {
                     id="PasswordConfirmation"
                     name="password_confirmation"
                     className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
-                   
+
                   />
                 </div>
 
@@ -212,7 +212,7 @@ export default function SimpleRegistrationForm() {
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account? {' '}
-                    <a href="login" className="text-gray-700 underline">Log in</a>.
+                    <Link to="login" className="text-gray-700">log in</Link>
                   </p>
                 </div>
               </form>
