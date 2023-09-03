@@ -212,7 +212,7 @@ export default function SimpleRegistrationForm() {
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account? {' '}
-                    <Link to="/login" className="text-gray-700">log in</Link>
+                    <Link to="login" className="text-gray-700">log in</Link>
                   </p>
                 </div>
               </form>
