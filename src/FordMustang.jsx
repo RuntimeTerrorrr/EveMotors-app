@@ -7,7 +7,7 @@ const Mustang = () => {
   
     return (
         <>
-            <div className="h-screen w-full">
+            <div className="h-screen w-full bg-zinc-100">
             <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
 
             </div>

@@ -6,7 +6,7 @@ const GTR = () => {
     const fixedTarget = [2.5, 1.8, 1.5]; // Adjust the target as needed
     return (
         <>
-            <div className="">
+            <div className=" bg-zinc-100">
             <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
 
             </div>
