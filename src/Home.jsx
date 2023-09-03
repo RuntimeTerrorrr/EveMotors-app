@@ -52,13 +52,9 @@ const Home = () => {
                 See our collection
               </a>
 
-              <Link to="/register">
-                <a
-                href=""
-                class="block w-full rounded bg-white/75 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto"
+              <Link to="/register" className="block w-full rounded bg-white/75 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto"
               >
                 Sign Up
-                </a>
               </Link>
             </div>
           </div>
