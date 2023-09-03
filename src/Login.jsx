@@ -10,15 +10,15 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        
+
         const formdata = new FormData();
         formdata.append("email", email);
         formdata.append("password", password);
 
         UserSignIn(formdata)
-            .then((data) => {
-                if (data.token) {
-                    localStorage.setItem("token", data.token);
+            .then((process) => {
+                if (process.data.token) {
+                    localStorage.setItem("token", process.data.token);
                 }
                 navigate("/dashboard");
 
