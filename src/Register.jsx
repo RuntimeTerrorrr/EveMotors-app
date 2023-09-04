@@ -5,7 +5,7 @@ import UserRegistration from "./services/UserRegistration.service.js";
 import { useNavigate, Link } from "react-router-dom";
 
 
-export default function SimpleRegistrationForm() {
+export default function Register() {
 
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');

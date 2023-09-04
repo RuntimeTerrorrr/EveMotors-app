@@ -1,8 +1,18 @@
 import React from 'react';
 import Header from './components/Header';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FormDashboard = () => {
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            navigate('/login')
+        }
+    }, [navigate]);
 
 
     return (
