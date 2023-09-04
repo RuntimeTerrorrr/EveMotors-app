@@ -3,8 +3,8 @@ import ModelViewer from "./components/ModelViewer.jsx";
 let Url = '/toyota_supra_a80_1993/scene.gltf'
 
 const Supra = () => {
-    const fixedScale = [0.4, 0.4, 0.4]; // Adjust the scale as needed
-    const fixedTarget = [0, 0, 0]; // Adjust the target as needed
+    const fixedScale = [0.4, 0.4, 0.4]; 
+    const fixedTarget = [0, 0, 0]; 
     return (
         <>
         <div className=' '>
