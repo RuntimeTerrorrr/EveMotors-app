@@ -8,7 +8,6 @@ const GTR = () => {
         <>
             <div className="h-screen w-full bg-zinc-100">
             <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
-
             </div>
 
             <div className="w-11/12 m-auto flow-root rounded-lg border border-gray-100 py-3 shadow-sm">
