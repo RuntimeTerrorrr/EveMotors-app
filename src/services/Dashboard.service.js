@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let API_URL = 'https://evemotors-serverfinal.vercel.app/admin/'
+let API_URL = 'https://evemotors-server-dt8dnn0gs-apocalypse404.vercel.app/admin/'
 
 export const FormDashboard = async (formDataToUpload) => {
 
