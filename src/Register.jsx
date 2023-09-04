@@ -36,26 +36,20 @@ export default function SimpleRegistrationForm() {
       <section className="bg-white">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <section
-            className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
+            className="relative flex justify-center items-center h-32  bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
           >
             <img
               alt="Night"
-              src="https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              src="https://images.unsplash.com/photo-1657987273009-8fe82419acc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
               className="absolute inset-0 h-full w-full object-cover opacity-80"
             />
 
-            <div className="hidden lg:relative lg:block lg:p-12">
+            <div className=" absolute">
               <a className="block text-white" href="/">
-                <img src={Logo} alt="Logo" className="h-5 m-auto" />
+                <img src={Logo} alt="Logo" className="h-16 m-auto" />
               </a>
 
-              <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl text-center">
-                Welcome to EveMotors
-              </h2>
-
-              <p className="mt-4 leading-relaxed text-white/90 text-center">
-                Where Luxury and Performance Unite for Your Ultimate Driving Experience.
-              </p>
+              
             </div>
           </section>
 

@@ -6,8 +6,8 @@ export const theme = {
       'prime':"#FF001D",
     },
     fontFamily: {
-      custom: ['prime', 'sans'], 
-      prime: ['secondary', 'sans'], 
+      custom: ['prime', 'prime'], 
+      prime: ['secondary', 'secondary'], 
     },
   },
 };
