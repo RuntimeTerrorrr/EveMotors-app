@@ -42,7 +42,7 @@ const Home = () => {
 
             
           </div>
-          <div className=" absolute bottom-8  right-10 flex mt-8   text-center">
+          <div className="  flex mt-8   text-center">
               <a
                 href=".list"
                 className="inline-block shrink-0 rounded-md    bg-[#FF001D] px-12 py-3 mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
