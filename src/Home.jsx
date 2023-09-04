@@ -33,9 +33,8 @@ const Home = () => {
           className=" h-full w-full py-10 px-10"
         >
           <div className="">
-            <h1 className=" text-6xl w-[450px] max-[1000px]:text-8xl   text-white">
-            Премиальное обслуживание
-вашего автомобиля       </h1>
+            <h1 className=" text-6xl w-[550px] max-[1000px]:text-8xl font-custom font-medium  text-white">
+            EveMotors Where We Care About Your Vehicle     </h1>
 
             <p className="mt-4 pr-8 text-xl text-white">
               Embark on Your Journey of Luxury and Performance: Discover Your Perfect Ride with Us.
@@ -46,12 +45,12 @@ const Home = () => {
           <div className=" absolute bottom-8  right-10 flex mt-8   text-center">
               <a
                 href=".list"
-                className="inline-block shrink-0 rounded-md border border-orange-red bg-[#FF001D] px-12 py-3 mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
+                className="inline-block shrink-0 rounded-md    bg-[#FF001D] px-12 py-3 mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
               >
                 See our collection
               </a>
 
-              <Link to="/register" className="block w-full rounded-2xl border border-white/20 px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto"
+              <Link to="/register" className="inline-block shrink-0 rounded-md border border-prime  px-12 py-3 mr-3 text-sm font-medium text-white transition hover:bg-[#FF001D] hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
               >
                 Sign Up
               </Link>

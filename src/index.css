@@ -15,3 +15,8 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: prime;
+  src: url("../public/Font/Manrope-VariableFont_wght.ttf") format("opentype");
+}
