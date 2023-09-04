@@ -7,23 +7,23 @@ const Supra = () => {
     const fixedTarget = [0, 0, 0]; // Adjust the target as needed
     return (
         <>
-        <div className=' h-[850px]'>
+        <div className=' '>
             <div className="     ">
                 <div className=" rounded-[32px] mt-8 mx-8  h-[600px] bg-prime">
                 <div className='  px-8 translate-y-24'>
                 <h1 className=" font-prime text-9xl uppercase text-white ">Toyota Supra Mk-4</h1>
                 <p className=' text-white font-custom text-3xl w-[600px]'>He become one of revolutionary cars of his time.beauty, eligance, and power.This car must you want.</p>
-                <img className=' float-right h-[500px] right-0 ' src={SupraImg} alt="" />
                 </div>
                 </div>
             </div>
         </div>
-        <div className=' bg-white h-[600px] mx-8 rounded-[32px]' >
-        </div>
+        {/* <div className=' bg-white h-[600px] mx-8 rounded-[32px]' >
+        </div> */}
         <div  className=' mx-8 mt-8 grid grid-cols-3 gap-4 '>
-            <div className=' h-[400px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-1 col-span-2 bg-[url(https://images.unsplash.com/photo-1603811478700-7590182b6abb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
-            <div className='  h-[400px] rounded-[32px] bg-center bg-cover bg-no-repeat bg-[url(https://images.unsplash.com/photo-1584610351025-1cf49565315d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)]'></div>
-            <div className='  h-[400px] rounded-[32px] bg-center bg-cover bg-no-repeat s bg-[url(https://images.unsplash.com/photo-1603811478698-0b1d6256f79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
+            <div className=' h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-1 col-span-2 bg-[url(https://images.unsplash.com/photo-1603811478700-7590182b6abb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
+            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat bg-[url(https://images.unsplash.com/photo-1584610351025-1cf49565315d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)]'></div>
+            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat  bg-[url(https://images.unsplash.com/photo-1603811478970-acb6e0916890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)]'></div>
+            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-2 col-end-4 bg-[url(https://images.unsplash.com/photo-1603811478698-0b1d6256f79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
         </div>
         <div>
             <div>
@@ -32,9 +32,15 @@ const Supra = () => {
                 </h1>
             </div>
         </div>
-        <div className=" bg-zinc-100">
-                <div>
+        <div className=" overflow-hidden ">
+                <div className=''>
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
+                </div>
+                <div>
+                    <div className=' text-white'>
+                        <h2>Top Speed</h2>
+                        <p>400kph</p>
+                    </div>
                 </div>
             </div>
 
