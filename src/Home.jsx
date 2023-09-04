@@ -33,7 +33,7 @@ const Home = () => {
           className=" h-full w-full py-10 px-10"
         >
           <div className="">
-            <h1 className=" text-6xl w-[550px] max-[1000px]:text-8xl font-custom font-medium  text-white">
+            <h1 className=" text-6xl w-[550px] max-[650px]:w-auto max-[1000px]:text-4xl  font-custom font-medium  text-white">
             EveMotors Where We Care About Your Vehicle     </h1>
 
             <p className="mt-4 pr-8 text-xl text-white">
@@ -42,10 +42,10 @@ const Home = () => {
 
             
           </div>
-          <div className="  flex mt-8   text-center">
+          <div className=" absolute  max-[600px]:relative   flex mt-8   text-center">
               <a
                 href=".list"
-                className="inline-block shrink-0 rounded-md    bg-[#FF001D] px-12 py-3 mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
+                className="inline-block shrink-0 rounded-md    bg-[#FF001D] px-12 py-3 max-[600px]:px-6  mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
               >
                 See our collection
               </a>
@@ -59,6 +59,10 @@ const Home = () => {
       </section>
       <div className="list">
       <CarList />
+      </div>
+      <div className=" h-[300px] bg-white rounded-[32px] mx-8 mt-8 flex justify-center items-end ">
+           <div className=" h-[141px] w-full bg-slate-100 mx-20 rounded-[32px]">
+           </div>
       </div>
     </>
   );
