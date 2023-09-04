@@ -18,9 +18,9 @@ body {
 
 @font-face {
   font-family: prime;
-  src: url("../public/Font/Manrope-VariableFont_wght.ttf") format("opentype");
+  src: url("/Font/Manrope-VariableFont_wght.ttf") format("opentype");
 }
 @font-face {
   font-family: secondary;
-  src: url("../public/Font/Ash.ttf") format("opentype");
+  src: url("/Font/Ash.ttf") format("opentype");
 }

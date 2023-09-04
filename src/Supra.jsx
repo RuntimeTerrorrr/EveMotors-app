@@ -11,7 +11,7 @@ const Supra = () => {
             <div className="     ">
                 <div className=" rounded-[32px] mt-8 mx-8  h-[600px] bg-prime">
                 <div className='  px-8 translate-y-24'>
-                <h1 className=" font-prime text-9xl uppercase text-white ">Toyota Supra Mk-4</h1>
+                <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-7xl uppercase text-white ">Toyota Supra Mk-4</h1>
                 <p className=' text-white font-custom text-3xl w-[600px]'>He become one of revolutionary cars of his time.beauty, eligance, and power.This car must you want.</p>
                 </div>
                 </div>
@@ -37,10 +37,6 @@ const Supra = () => {
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
                 <div>
-                    <div className=' text-white'>
-                        <h2>Top Speed</h2>
-                        <p>400kph</p>
-                    </div>
                 </div>
             </div>
 
