@@ -7,6 +7,7 @@ export const theme = {
     },
     fontFamily: {
       custom: ['prime', 'sans'], 
+      prime: ['secondary', 'sans'], 
     },
   },
 };
