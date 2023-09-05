@@ -59,10 +59,10 @@ export default function Register() {
             <div className="max-w-xl lg:max-w-3xl">
               <div className="relative -mt-16 block lg:hidden">
                 <a
-                  className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
+                  className="flex h-16 w-16 opacity-0 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
                   href="/"
                 >
-                  <img src={LogoV2} alt="Logo" className="h-2 m-auto" />
+                  {/* <img src={LogoV2} alt="Logo" className="h-2 m-auto" /> */}
                 </a>
 
                 <h1
