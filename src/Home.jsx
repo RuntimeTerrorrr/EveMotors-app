@@ -39,7 +39,7 @@ const Home = () => {
             <h1 className=" text-6xl w-[550px] max-[650px]:w-auto max-[1000px]:text-4xl  font-custom font-medium  text-white">
             EveMotors Where We Care About Your Vehicle     </h1>
 
-            <p className="mt-4 pr-8 text-xl text-white">
+            <p className="mt-4 w-[350px]  pr-8 text-xl text-white">
               Embark on Your Journey of Luxury and Performance: Discover Your Perfect Ride with Us.
             </p>
 
@@ -48,12 +48,12 @@ const Home = () => {
           <div className=" absolute  max-[600px]:relative   flex mt-8   text-center">
               <a
                 href=".list"
-                className="inline-block shrink-0 rounded-md    bg-[#FF001D] px-12 py-3 max-[600px]:px-6  mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
+                className="inline-block shrink-0 rounded-[13px]    bg-[#FF001D] px-12 py-3 max-[600px]:px-6  mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
               >
                 See our collection
               </a>
 
-              <Link to="/register" className="inline-block shrink-0 rounded-md border border-prime  px-12 py-3 mr-3 text-sm font-medium text-white transition hover:bg-[#FF001D] hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
+              <Link to="/register" className="inline-block shrink-0 rounded-[13px] border border-white  px-12 py-3 mr-3 text-sm font-medium text-white hover:border-[#1E1E1E] transition hover:bg-[#1E1E1E] hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
               >
                 Sign Up
               </Link>
@@ -63,8 +63,9 @@ const Home = () => {
       <div className="list">
       <CarList />
       </div>
-      <div className=" h-[300px] bg-white rounded-[32px] mx-8 mt-8 flex justify-center items-end ">
-           <div className=" h-[141px] w-full bg-slate-100 mx-20 rounded-[32px]">
+      <div className=" h-[244px] bg-white rounded-[32px] mx-8 mt-8 flex justify-center items-center ">
+           <div className=" h-[141px] w-full bg-[#F5F5F5]-100 mx-20 rounded-[32px] flex items-center">
+           <h2 className=" font-coustom text-lg font-semibold">Join us in Social Networks:</h2>
            </div>
       </div>
     </>
