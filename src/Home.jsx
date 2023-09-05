@@ -64,8 +64,16 @@ const Home = () => {
       <CarList />
       </div>
       <div className=" h-[244px] bg-white rounded-[32px] mx-8 mt-8 flex justify-center items-center ">
-           <div className=" h-[141px] w-full bg-[#F5F5F5]-100 mx-20 rounded-[32px] flex items-center">
+           <div className=" h-[141px] w-full bg-[#F5F5F5]-100 mx-20 rounded-[32px] flex items-center justify-between">
            <h2 className=" font-coustom text-lg font-semibold">Join us in Social Networks:</h2>
+           <div className="  grid grid-cols-3 gap-8">
+            <div className=" w-64  h-16 rounded-[18px] bg-prime">
+            </div>
+            <div className=" w-64 h-16 rounded-[16px] bg-prime">
+            </div>
+            <div className=" w-64 h-16 rounded-[16px] bg-prime">
+            </div>
+           </div>
            </div>
       </div>
     </>
