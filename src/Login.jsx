@@ -92,7 +92,7 @@ const Login = () => {
 
                         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                             <button
-                                className="inline-block shrink-0 rounded-md border border-gray-700 bg-prime px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-gray-700"
+                                className="inline-block shrink-0 rounded-[12px]  border border-prime bg-prime px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-gray-700"
                                 onClick={handleLogin}
                                 type='submit'
                             >
