@@ -33,7 +33,7 @@ export default function Register() {
 
   return (
     <>
-      <section className="bg-white">
+      <section className="">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <section
             className="relative flex justify-center items-center h-32  bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
@@ -46,7 +46,7 @@ export default function Register() {
 
             <div className=" absolute">
               <a className="block text-white" href="/">
-                <img src={Logo} alt="Logo" className="h-16 m-auto" />
+                <img src={Logo} alt="Logo" className="h-16 max-[1440px]:h-10 max-[1020px]:h-6 m-auto" />
               </a>
 
               
@@ -71,7 +71,7 @@ export default function Register() {
 
                 </h1>
 
-                <p className="mt-4 leading-relaxed text-gray-500">
+                <p className="mt-4 leading-relaxed text-white">
                   Where Luxury and Performance Unite for Your Ultimate Driving Experience.
                 </p>
               </div>
@@ -80,7 +80,7 @@ export default function Register() {
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="FirstName"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-white"
                   >
                     First Name
                   </label>
@@ -88,7 +88,7 @@ export default function Register() {
                   <input
                     type="text"
                     id="FirstName"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="i.e, Mike"
@@ -99,7 +99,7 @@ export default function Register() {
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="LastName"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-white"
                   >
                     Last Name
                   </label>
@@ -107,7 +107,7 @@ export default function Register() {
                   <input
                     type="text"
                     id="LastName"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="i.e, Alson"
@@ -116,7 +116,7 @@ export default function Register() {
                 </div>
 
                 <div className="col-span-6">
-                  <label htmlFor="Email" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="Email" className="block text-sm font-medium text-white">
                     Email
                   </label>
 
@@ -134,7 +134,7 @@ export default function Register() {
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="Password"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-white"
                   >
                     Password
                   </label>
@@ -142,7 +142,7 @@ export default function Register() {
                   <input
                     type="password"
                     id="Password"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
@@ -152,7 +152,7 @@ export default function Register() {
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="PasswordConfirmation"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-white"
                   >
                     Password Confirmation
                   </label>
@@ -161,7 +161,7 @@ export default function Register() {
                     type="password"
                     id="PasswordConfirmation"
                     name="password_confirmation"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
 
                   />
                 </div>
@@ -177,7 +177,7 @@ export default function Register() {
                       className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
                     />
 
-                    <span className="text-sm text-gray-700">
+                    <span className="text-sm text-white">
                       I want to receive emails about events, product updates and
                       company announcements.
                     </span>
@@ -185,19 +185,19 @@ export default function Register() {
                 </div>
 
                 <div className="col-span-6">
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-[#F5F5F5]">
                     By creating an account, you agree to our {' '}
-                    <a href="#" className="text-gray-700 underline">
+                    <a href="#" className="text-prime underline">
                       terms and conditions {' '}
                     </a>
                     and {' '}
-                    <a href="#" className="text-gray-700 underline">privacy policy</a>.
+                    <a href="#" className="text-prime underline">privacy policy</a>.
                   </p>
                 </div>
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                   <button
-                    className="inline-block shrink-0 rounded-md border border-gray-700 bg-gray-700 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none focus:ring active:text-gray-700"
+                    className="inline-block shrink-0 rounded-md border border-gray-700 bg-prime hover:text-white px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent focus:outline-none focus:ring active:text-gray-700"
                     type="submit"
                     onClick={handleRegister}
                   >
