@@ -27,7 +27,7 @@ const Carlisting = () => {
                 ></div>
 
                 <div
-                    class=" mx-24 py-24 rounded-2xl  bg-prime relative flex justify-between items-center "
+                    class=" mx-24 py-10  rounded-2xl  bg-prime relative flex justify-between items-center "
                 >
                  <AddCarPopup/>
                 </div>

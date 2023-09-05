@@ -76,6 +76,7 @@ export default function AddCarPopup() {
       <div>
         {activeStep === 0 && (
           <>
+          <div className=' grid grid-cols-2 px-10 gap-4 mt-10'>
           <div>
           <label
                     htmlFor="FirstName"
@@ -98,7 +99,7 @@ export default function AddCarPopup() {
                     htmlFor="FirstName"
                     className="block text-sm font-medium text-white"
                   >
-                  Intro
+                  Varient
           </label>
           <input
               type="text"
@@ -109,6 +110,57 @@ export default function AddCarPopup() {
               placeholder="i.e, Mike"
               required
             />
+          </div>
+          <div>
+          <label
+                    htmlFor="FirstName"
+                    className="block text-sm font-medium text-white"
+                  >
+                  Registered in
+          </label>
+          <input
+              type="text"
+              id="FirstName"
+              value={step1Data}
+              onChange={(e) => setStep1Data(e.target.value)}
+              className="mt-1 w-full rounded-md border  bg-white text-sm shadow-sm p-2 "
+              placeholder="i.e, Mike"
+              required
+            />
+          </div>
+          <div>
+          <label
+                    htmlFor="FirstName"
+                    className="block text-sm font-medium text-white"
+                  >
+                  Assembled in
+          </label>
+          <input
+              type="text"
+              id="FirstName"
+              value={step1Data}
+              onChange={(e) => setStep1Data(e.target.value)}
+              className="mt-1 w-full rounded-md border  bg-white text-sm shadow-sm p-2 "
+              placeholder="i.e, Mike"
+              required
+            />
+          </div>
+          <div className=' col-start-1 col-end-3'>
+          <label
+                    htmlFor="FirstName"
+                    className="block text-sm font-medium text-white"
+                  >
+                  Assembled in
+          </label>
+          <textarea
+              id="FirstName"
+              value={step1Data}
+              onChange={(e) => setStep1Data(e.target.value)}
+              className="mt-1 h-24  w-full rounded-md border  bg-white text-sm shadow-sm p-2 "
+              placeholder="i.e, Mike"
+              required
+            />
+          </div>
           </div>
             </>
         )}

@@ -65,9 +65,9 @@ export default function Register() {
             />
 
             <div className=" absolute">
-              <a className="block text-white" href="/">
+              <Link className="block text-white" to="/">
                 <img src={Logo} alt="Logo" className="h-16 max-[1440px]:h-10 max-[1020px]:h-6 m-auto" />
-              </a>
+              </Link>
 
 
             </div>
@@ -78,12 +78,13 @@ export default function Register() {
           >
             <div className="max-w-xl lg:max-w-3xl">
               <div className="relative -mt-16 block lg:hidden">
-                <a
+                <Link
                   className="flex h-16 w-16 opacity-0 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
-                  href="/"
+                  to="/"
                 >
                   {/* <img src={LogoV2} alt="Logo" className="h-2 m-auto" /> */}
-                </a>
+                </Link>
+                
 
                 <h1
                   className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
