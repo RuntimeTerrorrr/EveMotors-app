@@ -2,6 +2,7 @@
 // import { FetchedCars } from "./services/FetchedCars.service.js";
 import { Link } from "react-router-dom";
 import CarList from "./components/CarList";
+import Header from "./components/Header";
 
 const Home = () => {
 
@@ -25,6 +26,8 @@ const Home = () => {
       <section
         className="relative h-[630px] mx-8 mt-10 rounded-[32px] bg-[url(./assets/mainbackground.png)] bg-cover bg-center bg-no-repeat"
       >
+            <Header/>
+
         <div
           className="absolute inset-0 bg-gray-50 bg-transparent sm:from-gray-50 sm:to-gray-50 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
         ></div>
