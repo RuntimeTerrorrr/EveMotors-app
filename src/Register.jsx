@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Logo from './assets/Logo/logoWhite.png'
-import LogoV2 from './assets/Logo/logoBlack.png'
 import UserRegistration from "./services/UserRegistration.service.js";
 import { useNavigate, Link } from "react-router-dom";
+import LoaderAnimation from "./components/Loader.jsx";
 
 
 export default function Register() {
@@ -12,23 +12,36 @@ export default function Register() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleRegister = () => {
+    if (!firstName || !lastName || !email || !password) {
+      setError('Please fill in all fields.');
+      return;
+    }
+
     let formdata = new FormData();
     formdata.append("firstName", firstName);
     formdata.append("lastName", lastName);
     formdata.append("email", email);
     formdata.append("password", password);
 
+    setIsLoading(true);
+
     UserRegistration(formdata)
       .then((user) => {
         console.log(user);
+        navigate("/login");
       })
       .catch((error) => {
         console.error(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
 
-    navigate("/login");
+
   };
 
   return (
@@ -49,7 +62,7 @@ export default function Register() {
                 <img src={Logo} alt="Logo" className="h-16 max-[1440px]:h-10 max-[1020px]:h-6 m-auto" />
               </a>
 
-              
+
             </div>
           </section>
 
@@ -75,141 +88,149 @@ export default function Register() {
                   Where Luxury and Performance Unite for Your Ultimate Driving Experience.
                 </p>
               </div>
-
-              <form action="#" className="mt-8 grid grid-cols-6 gap-6">
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    htmlFor="FirstName"
-                    className="block text-sm font-medium text-white"
-                  >
-                    First Name
-                  </label>
-
-                  <input
-                    type="text"
-                    id="FirstName"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="i.e, Mike"
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    htmlFor="LastName"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Last Name
-                  </label>
-
-                  <input
-                    type="text"
-                    id="LastName"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    placeholder="i.e, Alson"
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6">
-                  <label htmlFor="Email" className="block text-sm font-medium text-white">
-                    Email
-                  </label>
-
-                  <input
-                    type="email"
-                    id="Email"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="i.e, mikealson@example.com"
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    htmlFor="Password"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Password
-                  </label>
-
-                  <input
-                    type="password"
-                    id="Password"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </div>
-
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    htmlFor="PasswordConfirmation"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Password Confirmation
-                  </label>
-
-                  <input
-                    type="password"
-                    id="PasswordConfirmation"
-                    name="password_confirmation"
-                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
-
-                  />
-                </div>
-
-
-
-                <div className="col-span-6">
-                  <label htmlFor="MarketingAccept" className="flex gap-4">
+              {isLoading ? (
+                <LoaderAnimation />
+              ) : (
+                <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                  <div className="col-span-6 sm:col-span-3">
+                    <label
+                      htmlFor="FirstName"
+                      className="block text-sm font-medium text-white"
+                    >
+                      First Name
+                    </label>
                     <input
-                      type="checkbox"
-                      id="MarketingAccept"
-                      name="marketing_accept"
-                      className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
+                      type="text"
+                      id="FirstName"
+                      className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      placeholder="i.e, Mike"
                     />
+                    <div className="error text-sm text-prime">{error}</div>
+                    <div className="form"></div>
+                  </div>
 
-                    <span className="text-sm text-white">
-                      I want to receive emails about events, product updates and
-                      company announcements.
-                    </span>
-                  </label>
-                </div>
+                  <div className="col-span-6 sm:col-span-3">
+                    <label
+                      htmlFor="LastName"
+                      className="block text-sm font-medium text-white"
+                    >
+                      Last Name
+                    </label>
 
-                <div className="col-span-6">
-                  <p className="text-sm text-[#F5F5F5]">
-                    By creating an account, you agree to our {' '}
-                    <a href="#" className="text-prime underline">
-                      terms and conditions {' '}
-                    </a>
-                    and {' '}
-                    <a href="#" className="text-prime underline">privacy policy</a>.
-                  </p>
-                </div>
+                    <input
+                      type="text"
+                      id="LastName"
+                      className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      placeholder="i.e, Alson"
+                    />
+                    <div className="error text-sm text-prime">{error}</div>
+                    <div className="form"></div>
+                  </div>
 
-                <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                  <button
-                    className="inline-block shrink-0 rounded-[12px]  border border-prime  bg-prime hover:text-white px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent focus:outline-none focus:ring active:text-gray-700"
-                    type="submit"
-                    onClick={handleRegister}
-                  >
-                    Create an account
-                  </button>
+                  <div className="col-span-6">
+                    <label htmlFor="Email" className="block text-sm font-medium text-white">
+                      Email
+                    </label>
 
-                  <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                    Already have an account? {' '}
-                    <Link to="/login" className="text-white">log in</Link>
-                  </p>
-                </div>
-              </form>
+                    <input
+                      type="email"
+                      id="Email"
+                      className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="i.e, mikealson@example.com"
+                    />
+                    <div className="error text-sm text-prime">{error}</div>
+                    <div className="form"></div>
+                  </div>
+
+                  <div className="col-span-6 sm:col-span-3">
+                    <label
+                      htmlFor="Password"
+                      className="block text-sm font-medium text-white"
+                    >
+                      Password
+                    </label>
+
+                    <input
+                      type="password"
+                      id="Password"
+                      className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <div className="error text-sm text-prime">{error}</div>
+                    <div className="form"></div>
+                  </div>
+
+                  <div className="col-span-6 sm:col-span-3">
+                    <label
+                      htmlFor="PasswordConfirmation"
+                      className="block text-sm font-medium text-white"
+                    >
+                      Password Confirmation
+                    </label>
+
+                    <input
+                      type="password"
+                      id="PasswordConfirmation"
+                      name="password_confirmation"
+                      className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+
+                    />
+                    <div className="error text-sm text-prime">{error}</div>
+                    <div className="form"></div>
+                  </div>
+
+
+
+                  <div className="col-span-6">
+                    <label htmlFor="MarketingAccept" className="flex gap-4">
+                      <input
+                        type="checkbox"
+                        id="MarketingAccept"
+                        name="marketing_accept"
+                        className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
+                      />
+
+                      <span className="text-sm text-white">
+                        I want to receive emails about events, product updates and
+                        company announcements.
+                      </span>
+                    </label>
+                  </div>
+
+                  <div className="col-span-6">
+                    <p className="text-sm text-[#F5F5F5]">
+                      By creating an account, you agree to our {' '}
+                      <a href="#" className="text-prime underline">
+                        terms and conditions {' '}
+                      </a>
+                      and {' '}
+                      <a href="#" className="text-prime underline">privacy policy</a>.
+                    </p>
+                  </div>
+
+                  <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
+                    <button
+                      className="inline-block shrink-0 rounded-[12px]  border border-prime  bg-prime hover:text-white px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent focus:outline-none focus:ring active:text-gray-700"
+                      type="submit"
+                      onClick={handleRegister}
+                    >
+                      Create an account
+                    </button>
+
+                    <p className="mt-4 text-sm text-gray-500 sm:mt-0">
+                      Already have an account? {' '}
+                      <Link to="/login" className="text-white">log in</Link>
+                    </p>
+                  </div>
+                </form>
+              )}
             </div>
           </main>
         </div>
