@@ -36,7 +36,7 @@ export default function Register() {
       <section className="">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <section
-            className="relative flex justify-center items-center h-32 rounded-3xl  bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
+            className="relative flex justify-center items-center h-32 rounded-3xl   lg:col-span-5 lg:h-full xl:col-span-6"
           >
             <img
               alt="Night"
