@@ -1,6 +1,7 @@
 // import { useState, useEffect } from "react";
 // import { FetchedCars } from "./services/FetchedCars.service.js";
 import { Link } from "react-router-dom";
+import Background from '../src/assets/mainbackground.png';
 import CarList from "./components/CarList";
 import Header from "./components/Header";
 import Github from '../src/assets/Icons/Github.svg';
@@ -27,8 +28,10 @@ const Home = () => {
   return (
     <>
       <section
-        className="relative h-[630px] mx-8 mt-10 rounded-[32px] bg-[url(./assets/mainbackground.png)] bg-cover bg-center bg-no-repeat"
+        className="relative overflow-hidden h-[630px] mx-8 mt-10 rounded-[32px] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${Background})` }}
       >
+        {/* <img className=" absolute w-full -z-50" src={Background} alt="" srcset="" /> */}
             <Header/>
 
         <div
@@ -45,8 +48,6 @@ const Home = () => {
             <p className="mt-4 w-[350px]  pr-8 text-xl text-white">
               Embark on Your Journey of Luxury and Performance: Discover Your Perfect Ride with Us.
             </p>
-
-            
           </div>
           <div className=" absolute  max-[600px]:relative   flex mt-8   text-center">
               <a
