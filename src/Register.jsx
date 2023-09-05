@@ -12,14 +12,21 @@ export default function Register() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [PassError, setPassError] = useState('');
 
   const handleRegister = () => {
     if (!firstName || !lastName || !email || !password) {
       setError('Please fill in all fields.');
       return;
-    }
+    };
+
+    if (password !== passwordConfirmation) {
+      setPassError('Passwords do not match.');
+      return;
+    };
 
     let formdata = new FormData();
     formdata.append("firstName", firstName);
@@ -180,9 +187,11 @@ export default function Register() {
                       id="PasswordConfirmation"
                       name="password_confirmation"
                       className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                      value={passwordConfirmation}
+                      onChange={(e) => setPasswordConfirmation(e.target.value)}
 
                     />
-                    <div className="error text-sm text-prime">{error}</div>
+                    <div className="error text-sm text-prime">{PassError}</div>
                     <div className="form"></div>
                   </div>
 
