@@ -40,8 +40,8 @@ export default function Register() {
           >
             <img
               alt="Night"
-              src="https://images.unsplash.com/photo-1657987273009-8fe82419acc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              className="absolute inset-0 h-full w-full object-cover opacity-80"
+              src="https://images.unsplash.com/photo-1657987273071-fbe77b5b4e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+              className="absolute inset-0 h-full w-full object-cover opacity-80 scale-x-[-1]"
             />
 
             <div className=" absolute">
@@ -59,10 +59,10 @@ export default function Register() {
             <div className="max-w-xl lg:max-w-3xl">
               <div className="relative -mt-16 block lg:hidden">
                 <a
-                  className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
+                  className="flex h-16 w-16 opacity-0 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
                   href="/"
                 >
-                  <img src={LogoV2} alt="Logo" className="h-2 m-auto" />
+                  {/* <img src={LogoV2} alt="Logo" className="h-2 m-auto" /> */}
                 </a>
 
                 <h1
