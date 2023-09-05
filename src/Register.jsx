@@ -36,12 +36,12 @@ export default function Register() {
       <section className="">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <section
-            className="relative flex justify-center items-center h-32  bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
+            className="relative flex justify-center items-center h-32 rounded-3xl  bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
           >
             <img
               alt="Night"
               src="https://images.unsplash.com/photo-1657987273071-fbe77b5b4e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              className="absolute inset-0 h-full w-full object-cover opacity-80 scale-x-[-1]"
+              className="absolute inset-0 h-full w-full object-cover opacity-80 rounded-3xl scale-x-[-1]"
             />
 
             <div className=" absolute">
