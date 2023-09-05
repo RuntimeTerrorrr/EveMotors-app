@@ -72,15 +72,15 @@ const Home = () => {
            <div className="  grid grid-cols-3 max-[900px]:grid-cols-1 gap-8">
             <div className=" w-64 max-[1350px]:w-auto max-[1350px]:px-6  h-16 bg-white rounded-[18px] flex justify-center items-center gap-3 ">
               <a href=""><img className=" h-12" src={Github} alt="" srcset="" /></a>
-              <h2 className=" font-custom">ВКонтакте</h2>
+              <h2 className=" font-custom font-bold">Github</h2>
             </div>
             <div className=" w-64 max-[1350px]:w-auto max-[1350px]:px-6  h-16 bg-white rounded-[18px] flex justify-center items-center gap-3 ">
               <a href=""><img className=" h-12" src={Behnace} alt="" srcset="" /></a>
-              <h2 className=" font-custom">ВКонтакте</h2>
+              <h2 className=" font-custom font-bold">Behance</h2>
             </div>
             <div className=" w-64 max-[1350px]:w-auto max-[1350px]:px-6 h-16 bg-white rounded-[18px] flex justify-center items-center gap-3 ">
               <a href=""><img className=" h-12" src={Linkedin} alt="" srcset="" /></a>
-              <h2 className=" font-custom">ВКонтакте</h2>
+              <h2 className=" font-custom font-bold">Linkedin</h2>
             </div>
            </div>
            </div>
