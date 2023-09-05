@@ -1,4 +1,4 @@
-import Logo from './assets/Logo/logoBlack.png'
+import Logo from './assets/Logo/logoWhite.png'
 import UserSignIn from './services/UserSignIn.service.js';
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ const Login = () => {
                         src={Logo}
                         alt="Your Company"
                     />
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
                         Sign in to your account
                     </h2>
                 </div>
@@ -48,7 +48,7 @@ const Login = () => {
                         handleLogin(e);
                     }}>
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                                 Email address
                             </label>
                             <div className="mt-2">
@@ -58,7 +58,7 @@ const Login = () => {
                                     type="email"
                                     autoComplete="email"
                                     required
-                                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm text-gray-700 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+                                    className="mt-1 w-full rounded-md border border-gray-300 bg-white text-sm  shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
@@ -67,11 +67,11 @@ const Login = () => {
 
                         <div>
                             <div className="flex items-center justify-between">
-                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">
                                     Password
                                 </label>
                                 <div className="text-sm">
-                                    <a href="login" className="text-gray-700 underline">Forgot Password?</a>.
+                                    <a href="login" className="text-[#F5F5F5] underline">Forgot Password?</a>.
                                 </div>
                             </div>
                             <div className="mt-2">
@@ -90,7 +90,7 @@ const Login = () => {
 
                         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                             <button
-                                className="inline-block shrink-0 rounded-md border border-gray-700 bg-gray-700 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-gray-700 focus:outline-none focus:ring active:text-gray-700"
+                                className="inline-block shrink-0 rounded-md border border-gray-700 bg-prime px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-gray-700"
                                 onClick={handleLogin}
                                 type='submit'
                             >
@@ -99,7 +99,7 @@ const Login = () => {
 
                             <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                 Not a member? {' '}
-                                <Link to="login" className="text-gray-700">Sign up</Link>
+                                <Link to="login" className="text-white">Sign up</Link>
                             </p>
                         </div>
                     </form>
