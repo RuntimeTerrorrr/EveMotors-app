@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         custom: ['prime', 'prime'],
+        prime: ['Secondary', 'prime'],
       },
       animation: {
         abox1: 'abox1 4s 1s forwards ease-in-out infinite',
