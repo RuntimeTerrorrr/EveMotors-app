@@ -43,8 +43,9 @@ const AddACar = () => {
 
     return (
         <>
-            <Header />
-
+ <section
+                class="relative h-screen py-12  bg-[url(https://images.unsplash.com/photo-1619196721139-4039c7f330a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)] bg-cover bg-center bg-no-repeat"
+            >            <Header />
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 bg-gray-50">
 
                 <div className="w-11/12 rounded-lg bg-gray-100 m-auto h-fit flex flex-col items-center">
@@ -215,6 +216,8 @@ const AddACar = () => {
                 </a>
 
             </div>
+            
+            </section>
         </>
     );
 };
