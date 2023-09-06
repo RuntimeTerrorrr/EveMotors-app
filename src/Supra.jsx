@@ -171,7 +171,7 @@ const Supra = () => {
                     </div>
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10'>
-                        <img src={staringIcon} alt="" srcset="" />
+                        <img src={SpiralIcom} alt="" srcset="" />
                     </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
