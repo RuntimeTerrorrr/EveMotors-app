@@ -1,5 +1,7 @@
 import staringIcon from '../src/assets/Icons/staring.png';
 import ReloadIcon from '../src/assets/Icons/reload.png';
+import ThunderIcom from '../src/assets/Icons/thunder.png';
+import SpiralIcom from '../src/assets/Icons/spiral.png';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ModelViewer from "./components/ModelViewer.jsx";
@@ -151,31 +153,35 @@ const Supra = () => {
                     </ul>
                     </div>
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 bg-prime'></div>
+                    <div className=' w-10 h-10 '>
+                        <img src={ThunderIcom} alt="" srcset="" />
+                    </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
                             <h2 className=' font-custom font-bold'>
-                                480kph
+                                840hp
                             </h2>
                         </li>
                         <li>
                             <h2 className=' font-custom font-medium opacity-70'>
-                                Top Speed
+                                Power
                             </h2>
                         </li>
                     </ul>
                     </div>
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 bg-prime'></div>
+                    <div className=' w-10 h-10'>
+                        <img src={staringIcon} alt="" srcset="" />
+                    </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
                             <h2 className=' font-custom font-bold'>
-                                480kph
+                                480Nm
                             </h2>
                         </li>
                         <li>
                             <h2 className=' font-custom font-medium opacity-70'>
-                                Top Speed
+                                Torque
                             </h2>
                         </li>
                     </ul>
