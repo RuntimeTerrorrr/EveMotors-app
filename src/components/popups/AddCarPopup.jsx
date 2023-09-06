@@ -6,31 +6,33 @@ import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import 'tailwindcss/tailwind.css'; 
+import 'tailwindcss/tailwind.css';
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
 const AddCarPopup = () => {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
-  const [formData, setFormData] = React.useState({
-    makeModel: '',
-    variant: '',
-    registeredIn: '',
-    assembledIn: '',
-    engine: '',
-    torque: '',
-    power: '',
-    topSpeed: '',
-    bodyType: '',
-    category: '',
-    imageLink1: '',
-    imageLink2: '',
-    imageLink3: '',
-    imageLink4: '',
-    modelCDN: '',
-    fixedScaleValue: '',
-  });
+
+  const [makeModel, setMakeModel] = React.useState('');
+  const [variant, setVariant] = React.useState('');
+  const [registeredIn, setRegisteredIn] = React.useState('');
+  const [assembledIn, setAssembledIn] = React.useState('');
+  const [intro, setIntro] = React.useState('');
+  const [engine, setEngine] = React.useState('');
+  const [torque, setTorque] = React.useState('');
+  const [power, setPower] = React.useState('');
+  const [topSpeed, setTopSpeed] = React.useState('');
+  const [bodyType, setBodyType] = React.useState('');
+  const [category, setCategory] = React.useState('');
+  const [imageLink1, setImageLink1] = React.useState('');
+  const [imageLink2, setImageLink2] = React.useState('');
+  const [imageLink3, setImageLink3] = React.useState('');
+  const [imageLink4, setImageLink4] = React.useState('');
+  const [imageLink5, setImageLink5] = React.useState('');
+  const [modelCDN, setModelCDN] = React.useState('');
+  const [fixedScaleValue, setFixedScaleValue] = React.useState('');
+
   const [formSubmitted, setFormSubmitted] = React.useState(false);
 
   const totalSteps = () => {
@@ -70,6 +72,7 @@ const AddCarPopup = () => {
   };
 
   const handleComplete = () => {
+
     const newCompleted = completed;
     newCompleted[activeStep] = true;
     setCompleted(newCompleted);
@@ -117,10 +120,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="makeModel"
-                  value={formData.makeModel}
-                  onChange={handleChange}
+                  value={makeModel}
+                  onChange={(e) => setMakeModel(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="Make Model"
                   required
                 />
               </div>
@@ -134,10 +136,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="variant"
-                  value={formData.variant}
-                  onChange={handleChange}
+                  value={variant}
+                  onChange={(e) => setVariant(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -151,10 +152,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="registeredIn"
-                  value={formData.registeredIn}
-                  onChange={handleChange}
+                  value={registeredIn}
+                  onChange={(e) => setRegisteredIn(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -168,10 +168,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="assembledIn"
-                  value={formData.assembledIn}
-                  onChange={handleChange}
+                  value={assembledIn}
+                  onChange={(e) => setAssembledIn(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -184,10 +183,9 @@ const AddCarPopup = () => {
                 </label>
                 <textarea
                   id="intro"
-                  value={formData.intro}
-                  onChange={handleChange}
+                  value={intro}
+                  onChange={(e) => setIntro(e.target.value)}
                   className="mt-1 h-24 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -207,10 +205,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="engine"
-                  value={formData.engine}
-                  onChange={handleChange}
+                  value={engine}
+                  onChange={(e) => setEngine(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -224,10 +221,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="torque"
-                  value={formData.torque}
-                  onChange={handleChange}
+                  value={torque}
+                  onChange={(e) => setTorque(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -241,10 +237,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="power"
-                  value={formData.power}
-                  onChange={handleChange}
+                  value={power}
+                  onChange={(e) => setPower(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -258,10 +253,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="topSpeed"
-                  value={formData.topSpeed}
-                  onChange={handleChange}
+                  value={topSpeed}
+                  onChange={(e) => setTopSpeed(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -275,10 +269,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="bodyType"
-                  value={formData.bodyType}
-                  onChange={handleChange}
+                  value={bodyType}
+                  onChange={(e) => setBodyType(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -292,10 +285,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="category"
-                  value={formData.category}
-                  onChange={handleChange}
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -315,10 +307,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="imageLink1"
-                  value={formData.imageLink1}
-                  onChange={handleChange}
+                  value={imageLink1}
+                  onChange={(e) => setImageLink1(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -332,10 +323,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="imageLink2"
-                  value={formData.imageLink2}
-                  onChange={handleChange}
+                  value={imageLink2}
+                  onChange={(e) => setImageLink2(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -349,10 +339,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="imageLink3"
-                  value={formData.imageLink3}
-                  onChange={handleChange}
+                  value={imageLink3}
+                  onChange={(e) => setImageLink3(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -366,10 +355,9 @@ const AddCarPopup = () => {
                 <input
                   type="text"
                   id="imageLink4"
-                  value={formData.imageLink4}
-                  onChange={handleChange}
+                  value={imageLink4}
+                  onChange={(e) => setImageLink4(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                  placeholder="i.e, Mike"
                   required
                 />
               </div>
@@ -402,10 +390,9 @@ const AddCarPopup = () => {
                   <input
                     type="text"
                     id="modelCDN"
-                    value={formData.modelCDN}
-                    onChange={handleChange}
+                    value={modelCDN}
+                    onChange={(e) => setModelCDN(e.target.value)}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    placeholder="i.e, Mike"
                     required
                   />
                 </div>
@@ -419,10 +406,9 @@ const AddCarPopup = () => {
                   <input
                     type="text"
                     id="fixedScaleValue"
-                    value={formData.fixedScaleValue}
-                    onChange={handleChange}
+                    value={fixedScaleValue}
+                    onChange={(e) => setFixedScaleValue(e.target.value)}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    placeholder="i.e, Mike"
                     required
                   />
                 </div>
@@ -436,10 +422,9 @@ const AddCarPopup = () => {
                   <input
                     type="text"
                     id="imageLink5"
-                    value={formData.imageLink5}
-                    onChange={handleChange}
+                    value={imageLink5}
+                    onChange={(e) => setImageLink5(e.target.value)}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    placeholder="i.e, Mike"
                     required
                   />
                 </div>
