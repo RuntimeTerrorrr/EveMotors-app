@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import 'tailwindcss/tailwind.css';
+import { FormDashboard } from '../../services/Dashboard.service.js';
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
@@ -108,6 +109,12 @@ const AddCarPopup = () => {
     setFormSubmitted(true);
   };
 
+
+  FormDashboard(formData)
+    .then(() => { })
+    .catch((error) => {
+      console.error(error);
+    })
 
   return (
     <Box className="flex flex-col justify-between" sx={{ width: '100%', px: '20px', height: '400px' }}>
