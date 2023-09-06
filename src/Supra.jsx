@@ -42,12 +42,12 @@ const Supra = () => {
                 </h1>
             </div>
         </div>
-        {/* <div className=" overflow-hidden ">
+        <div className=" overflow-hidden ">
                 <div className=''>
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
-            </div> */}
-            <div className=' h-[500px] max-[650px]:h-auto bg-prime mx-8 rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 items-center '>
+            </div>
+            <div className=' h-[500px] bg-prime mx-8 rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 items-center '>
             <div  className=' max-[1200px]:order-2'>
             <div >
                 <div className=' grid grid-cols-2  gap-8 max-[1380px]:gap-4 '>
