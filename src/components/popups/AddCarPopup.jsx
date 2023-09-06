@@ -33,6 +33,27 @@ const AddCarPopup = () => {
   const [modelCDN, setModelCDN] = React.useState('');
   const [fixedScaleValue, setFixedScaleValue] = React.useState('');
 
+  let formData = new FormData();
+  formData.append("makeModel", makeModel);
+  formData.append("variant", variant);
+  formData.append("registeredIn", registeredIn);
+  formData.append("assembledIn", assembledIn);
+  formData.append("intro", intro);
+  formData.append("engine", engine);
+  formData.append("torque", torque);
+  formData.append("power", power);
+  formData.append("topSpeed", topSpeed);
+  formData.append("bodyType", bodyType);
+  formData.append("category", category);
+  formData.append("imageLink1", imageLink1);
+  formData.append("imageLink2", imageLink2);
+  formData.append("imageLink3", imageLink3);
+  formData.append("imageLink4", imageLink4);
+  formData.append("imageLink5", imageLink5);
+  formData.append("modelCDN", modelCDN);
+  formData.append("fixedScaleValue", fixedScaleValue);
+
+
   const [formSubmitted, setFormSubmitted] = React.useState(false);
 
   const totalSteps = () => {
@@ -87,13 +108,6 @@ const AddCarPopup = () => {
     setFormSubmitted(true);
   };
 
-  const handleChange = (event) => {
-    const { id, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: value,
-    }));
-  };
 
   return (
     <Box className="flex flex-col justify-between" sx={{ width: '100%', px: '20px', height: '400px' }}>
