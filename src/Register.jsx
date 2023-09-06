@@ -5,7 +5,8 @@ import { useNavigate, Link } from "react-router-dom";
 import LoaderAnimation from "./components/Loader.jsx";
 
 
-export default function Register() {
+export default function Register(e) {
+  e.preventDefault();
 
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
@@ -19,7 +20,7 @@ export default function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    
+
     if (!firstName || !lastName || !email || !password) {
       setError('Please fill in all fields.');
       return;
