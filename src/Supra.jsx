@@ -47,13 +47,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -62,13 +62,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -77,13 +77,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -92,13 +92,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -117,13 +117,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -132,13 +132,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -147,13 +147,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
@@ -162,13 +162,13 @@ const Supra = () => {
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
-                        <li>
-                            <h2>
+                        <li className=' flex justify-center'>
+                            <h2 className=' font-custom font-bold'>
                                 480kph
                             </h2>
                         </li>
                         <li>
-                            <h2>
+                            <h2 className=' font-custom font-medium opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
