@@ -4,8 +4,8 @@ const CarList = () => {
     return (
         <>
             <div className=" ">
-                <div className=" mx-8 mt-6 grid grid-cols-3 max-[1200px]:grid-cols-2 max-[750px]:grid-cols-1 gap-4">
-                    <Link to="/car/supra-mk4" className="group h-[243px] overflow-hidden  bg-[#1E1E1E] hover:bg-prime rounded-[24px] relative flex  justify-start items-center">
+                <div className=" mx-8 max-[440px]:mx-4 mt-6 grid grid-cols-3 max-[1200px]:grid-cols-2 max-[750px]:grid-cols-1 gap-4">
+                    <Link to="/car/supra-mk4" className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E] hover:bg-prime rounded-[24px] relative flex  justify-start items-center">
                         <div class=" absolute right-4 z-50   flex transition-all">
                             <img className=" group-hover:w-96 transition-all w-64 z-50" src="supra-mk4.png" alt="" srcset="" />
                         </div>
@@ -26,7 +26,7 @@ const CarList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/car/nissan-gtr" className="group h-[243px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
+                    <Link to="/car/nissan-gtr" className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
                         <div class=" absolute right-4 z-50   flex transition-all">
                             <img className=" group-hover:w-96 transition-all w-64 z-50" src="gtr.png" alt="" srcset="" />
                         </div>
@@ -47,7 +47,7 @@ const CarList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/car/ford-mustang" className="group h-[243px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
+                    <Link to="/car/ford-mustang" className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
                         <div class=" absolute right-4 z-50   flex transition-all">
                             <img className=" group-hover:w-96 transition-all w-64 z-50" src="mustanggt.png" alt="" srcset="" />
                         </div>
@@ -67,7 +67,7 @@ const CarList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/car/supra-mk4" className="group h-[243px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
+                    <Link to="/car/supra-mk4" className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
                         <div class=" absolute right-4 z-50   flex transition-all">
                             <img className=" group-hover:w-96 transition-all  w-64 z-50" src="supra-mk4.png" alt="" srcset="" />
                         </div>
@@ -88,7 +88,7 @@ const CarList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/car/nissan-gtr" className="group h-[243px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
+                    <Link to="/car/nissan-gtr" className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
                         <div class=" absolute right-4 z-50   flex transition-all">
                             <img className=" group-hover:w-96 transition-all w-64 z-50" src="gtr.png" alt="" srcset="" />
                         </div>
@@ -109,7 +109,7 @@ const CarList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/car/ford-mustang" className="group h-[243px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
+                    <Link to="/car/ford-mustang" className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E]  hover:bg-prime  rounded-[24px] relative flex  justify-start items-center">
                         <div class=" absolute right-4 z-50   flex transition-all">
                             <img className=" group-hover:w-96 transition-all w-64 z-50" src="mustanggt.png" alt="" srcset="" />
                         </div>
