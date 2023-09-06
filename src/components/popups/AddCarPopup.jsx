@@ -6,7 +6,7 @@ import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
+import 'tailwindcss/tailwind.css'; 
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
@@ -80,7 +80,6 @@ export default function AddCarPopup() {
   };
 
   const handleSubmit = () => {
-    // Here, you can submit the `formData` object to your backend or perform any other actions
     console.log('Form Data:', formData);
     setFormSubmitted(true);
   };
