@@ -40,10 +40,10 @@ const Supra = () => {
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
             </div>
-            <div className=' h-[600px] bg-prime mx-8 rounded-[32px] flex justify-center items-center'>
+            <div className=' h-[500px] bg-prime mx-8 rounded-[32px] flex justify-between px-20 items-center'>
             <div>
-            <div>
-                <div className=' '>
+            <div >
+                <div className=' grid grid-cols-2 gap-8'>
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
@@ -107,9 +107,13 @@ const Supra = () => {
                 </div>
                 </div>
             </div>
+            <div className=' text-white w-[600px]'>
+                <h2 className=' font-custom text-6xl font-bold pb-6'>Toyota Supra Mk-4</h2>
+                <p className=' font-custom'>The Toyota Supra MK4 is renowned for its legendary 2JZ-GTE engine, a 3.0-liter twin-turbocharged inline-six, prized for its performance and modification capabilities among mechanics and enthusiasts.</p>
+            </div>
             <div>
             <div>
-                <div className=' '>
+                <div className=' grid grid-cols-2 gap-8'>
                     <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                     <div className=' w-10 h-10 bg-prime'></div>
                     <ul>
