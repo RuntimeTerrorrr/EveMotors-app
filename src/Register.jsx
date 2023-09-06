@@ -18,8 +18,7 @@ export default function Register(e) {
   const [error, setError] = useState('');
   const [PassError, setPassError] = useState('');
 
-  const handleRegister = (e) => {
-    e.preventDefault();
+  const handleRegister = () => {
 
     if (!firstName || !lastName || !email || !password) {
       setError('Please fill in all fields.');
