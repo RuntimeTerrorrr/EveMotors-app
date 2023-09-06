@@ -118,7 +118,6 @@ export default function Register() {
                       placeholder="i.e, Mike"
                     />
                     <div className="error text-sm text-prime">{error}</div>
-                    <div className="form"></div>
                   </div>
 
                   <div className="col-span-6 sm:col-span-3">
@@ -138,7 +137,6 @@ export default function Register() {
                       placeholder="i.e, Alson"
                     />
                     <div className="error text-sm text-prime">{error}</div>
-                    <div className="form"></div>
                   </div>
 
                   <div className="col-span-6">
@@ -155,7 +153,6 @@ export default function Register() {
                       placeholder="i.e, mikealson@example.com"
                     />
                     <div className="error text-sm text-prime">{error}</div>
-                    <div className="form"></div>
                   </div>
 
                   <div className="col-span-6 sm:col-span-3">
@@ -174,7 +171,6 @@ export default function Register() {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                     <div className="error text-sm text-prime">{error}</div>
-                    <div className="form"></div>
                   </div>
 
                   <div className="col-span-6 sm:col-span-3">
@@ -195,7 +191,6 @@ export default function Register() {
 
                     />
                     <div className="error text-sm text-prime">{PassError}</div>
-                    <div className="form"></div>
                   </div>
 
 

@@ -1,4 +1,3 @@
-import { Loader } from 'three';
 import Logo from './assets/Logo/logoWhite.png'
 import UserSignIn from './services/UserSignIn.service.js'
 import { useState } from 'react';
@@ -10,9 +9,16 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('')
+    const [loginError, setLoginError] = useState('');
 
     const handleLogin = (e) => {
         e.preventDefault();
+
+        if (!email || !password) {
+            setError('Please fill in all fields.');
+            return;
+        };
 
         const formdata = new FormData();
         formdata.append("email", email);
@@ -24,12 +30,14 @@ const Login = () => {
             .then((data) => {
                 if (data.token) {
                     localStorage.setItem("token", data.token);
+                } else {
+                    console.error(error);
                 }
                 navigate("/dashboard");
-
             })
             .catch((error) => {
                 console.error(error);
+                setLoginError('Invalid email or password');
             })
             .finally(() => {
                 setIsLoading(false);
@@ -77,6 +85,7 @@ const Login = () => {
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
+                                        <div className="error text-sm text-prime">{error}</div>
                                     </div>
                                 </div>
 
@@ -100,6 +109,9 @@ const Login = () => {
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
                                         />
+                                        <div className="error text-sm text-prime">{error}</div>
+                                        <div className="error text-sm text-prime">{loginError}</div>
+                                        
                                     </div>
                                 </div>
 
