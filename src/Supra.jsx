@@ -2,6 +2,10 @@ import staringIcon from '../src/assets/Icons/staring.png';
 import ReloadIcon from '../src/assets/Icons/reload.png';
 import ThunderIcom from '../src/assets/Icons/thunder.png';
 import SpiralIcom from '../src/assets/Icons/spiral.png';
+import PistonIcon from '../src/assets/Icons/piston.png';
+import VehicleIcon from '../src/assets/Icons/vehicle.png';
+import TransmissionIcon from '../src/assets/Icons/transmission.png';
+import EngineIcon from '../src/assets/Icons/engine.png';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ModelViewer from "./components/ModelViewer.jsx";
@@ -15,95 +19,102 @@ const Supra = () => {
         <Header/>
         <div className=' '>
             <div className="     ">
-                <div className=" rounded-[32px] mt-8 mx-8  h-[600px] bg-prime">
-                <div className='  px-8 translate-y-24'>
-                <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-7xl uppercase text-white ">Toyota Supra Mk-4</h1>
-                <p className=' text-white font-custom text-2xl w-[600px]'>The iconic sports car known for its timeless design and thrilling turbocharged performance.</p>
+                <div className=" flex items-center rounded-[32px] mx-8  h-[500px] bg-prime">
+                <div className='  px-8 '>
+                <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl   uppercase text-white ">Toyota Supra Mk-4</h1>
+                <p className=' text-white font-custom text-2xl  max-[900px]:w-auto '>The iconic sports car known for its timeless design and thrilling turbocharged performance.</p>
                 </div>
                 </div>
             </div>
         </div>
         {/* <div className=' bg-white h-[600px] mx-8 rounded-[32px]' >
         </div> */}
-        <div  className=' mx-8 mt-8 grid grid-cols-3 gap-4 '>
+        <div  className=' mx-8 mt-8 grid grid-cols-3 max-[900px]:grid-cols-1 max-[900px]:gap-y-8  gap-4 '>
             <div className=' h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-1 col-span-2 bg-[url(https://images.unsplash.com/photo-1603811478700-7590182b6abb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
-            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat bg-[url(https://images.unsplash.com/photo-1584610351025-1cf49565315d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)]'></div>
-            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat  bg-[url(https://images.unsplash.com/photo-1603811478970-acb6e0916890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)]'></div>
-            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-2 col-end-4 bg-[url(https://images.unsplash.com/photo-1603811478698-0b1d6256f79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
+            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat max-[900px]:col-start-1 max-[900px]:col-span-2 bg-[url(https://images.unsplash.com/photo-1584610351025-1cf49565315d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)]'></div>
+            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat max-[900px]:col-start-1 max-[900px]:col-span-2   bg-[url(https://images.unsplash.com/photo-1603811478970-acb6e0916890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)]'></div>
+            <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-2 col-end-4 max-[900px]:col-start-1 max-[900px]:col-span-2  bg-[url(https://images.unsplash.com/photo-1603811478698-0b1d6256f79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
         </div>
         <div>
             <div>
-                <h1 className=' font-prime text-white text-9xl mt-8 px-8'>
+                <h1 className=' font-prime text-white text-9xl max-[1440px]:text-7xl max-[1200px]:text-5xl  mt-8 px-8'>
                    3d Model
                 </h1>
             </div>
         </div>
-        <div className=" overflow-hidden ">
+        {/* <div className=" overflow-hidden ">
                 <div className=''>
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
-            </div>
-            <div className=' h-[500px] bg-prime mx-8 rounded-[32px] flex justify-between px-20 items-center'>
-            <div>
+            </div> */}
+            <div className=' h-[500px] max-[650px]:h-auto bg-prime mx-8 rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 items-center '>
+            <div  className=' max-[1200px]:order-2'>
             <div >
-                <div className=' grid grid-cols-2 gap-8'>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 bg-prime'>
+                <div className=' grid grid-cols-2  gap-8 max-[1380px]:gap-4 '>
+                    <div className=' w-32  h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
+                        <img src={VehicleIcon} alt="" srcset="" />
                     </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
                             <h2 className=' font-custom font-bold'>
-                                480kph
+                            S-Coupe
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
-                                Top Speed
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
+                            Body Type  
                             </h2>
                         </li>
                     </ul>
                     </div>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 bg-prime'></div>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
+                        <img src={EngineIcon} alt="" srcset="" />
+                    </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
                             <h2 className=' font-custom font-bold'>
-                                480kph
+                            2JZ-GE
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
-                                Top Speed
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
+                                Engine
                             </h2>
                         </li>
                     </ul>
                     </div>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 bg-prime'></div>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6'>
+                        <img src={TransmissionIcon} alt="" srcset="" />
+                    </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
                             <h2 className=' font-custom font-bold'>
-                                480kph
+                                Manual
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
-                                Top Speed
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
+                            Transmission
                             </h2>
                         </li>
                     </ul>
                     </div>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 bg-prime'></div>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28  rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
+                        <img src={PistonIcon} alt="" srcset="" />
+                    </div>
                     <ul  className=' flex flex-col items-center'>
                         <li>
                             <h2 className=' font-custom font-bold'>
-                                480kph
+                                3.0L
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
-                                Top Speed
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
+                            Displacement
                             </h2>
                         </li>
                     </ul>
@@ -111,15 +122,15 @@ const Supra = () => {
                 </div>
                 </div>
             </div>
-            <div className=' text-white w-[600px]'>
-                <h2 className=' font-custom text-6xl font-bold pb-6'>Toyota Supra Mk-4</h2>
+            <div className=' text-white w-[600px] max-[1330px]:w-[400px] max-[1200px]:order-1 max-[1000px]:hidden'>
+                <h2 className=' font-custom text-6xl max-[1100px]:text-5xl font-bold pb-6'>Toyota Supra Mk-4</h2>
                 <p className=' font-custom'>The Toyota Supra MK4 is renowned for its legendary 2JZ-GTE engine, a 3.0-liter twin-turbocharged inline-six, prized for its performance and modification capabilities among mechanics and enthusiasts.</p>
             </div>
-            <div>
-            <div>
-                <div className=' grid grid-cols-2 gap-8'>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 '>
+            <div className=' max-[1200px]:order-3'>
+            <div >
+                <div className=' grid grid-cols-2 gap-8 max-[1380px]:gap-4 '>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
                     <img src={staringIcon} alt="" srcset="" />
                     </div>
                     <ul  className=' flex flex-col items-center'>
@@ -129,14 +140,14 @@ const Supra = () => {
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
                                 Top Speed
                             </h2>
                         </li>
                     </ul>
                     </div>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 '>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6'>
                         <img src={ReloadIcon} alt="" srcset="" />
                     </div>
                     <ul  className=' flex flex-col items-center'>
@@ -146,14 +157,14 @@ const Supra = () => {
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
                                 0-100
                             </h2>
                         </li>
                     </ul>
                     </div>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10 '>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
                         <img src={ThunderIcom} alt="" srcset="" />
                     </div>
                     <ul  className=' flex flex-col items-center'>
@@ -163,14 +174,14 @@ const Supra = () => {
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
                                 Power
                             </h2>
                         </li>
                     </ul>
                     </div>
-                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
-                    <div className=' w-10 h-10'>
+                    <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6'>
                         <img src={SpiralIcom} alt="" srcset="" />
                     </div>
                     <ul  className=' flex flex-col items-center'>
@@ -180,7 +191,7 @@ const Supra = () => {
                             </h2>
                         </li>
                         <li>
-                            <h2 className=' font-custom font-medium opacity-70'>
+                            <h2 className=' font-custom font-medium max-[1110px]:text-sm opacity-70'>
                                 Torque
                             </h2>
                         </li>
