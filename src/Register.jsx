@@ -5,8 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import LoaderAnimation from "./components/Loader.jsx";
 
 
-export default function Register(e) {
-  e.preventDefault();
+export default function Register() {
 
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
