@@ -1,4 +1,6 @@
 import SupraImg from '../public/supra-mk4.png';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import ModelViewer from "./components/ModelViewer.jsx";
 let Url = '/toyota_supra_a80_1993/scene.gltf'
 
@@ -7,6 +9,7 @@ const Supra = () => {
     const fixedTarget = [0, 0, 0]; 
     return (
         <>
+        <Header/>
         <div className=' '>
             <div className="     ">
                 <div className=" rounded-[32px] mt-8 mx-8  h-[600px] bg-prime">
@@ -39,6 +42,7 @@ const Supra = () => {
                 <div>
                 </div>
             </div>
+            <Footer/>
 
             {/* <div className="h-screen w-full bg-zinc-100">
                 <div>
