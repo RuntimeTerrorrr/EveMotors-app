@@ -39,8 +39,140 @@ const Supra = () => {
                 <div className=''>
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
-                <div>
+            </div>
+            <div className=' h-[600px] bg-prime mx-8 rounded-[32px] flex justify-center items-center'>
+            <div>
+            <div>
+                <div className=' '>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
                 </div>
+                </div>
+            </div>
+            <div>
+            <div>
+                <div className=' '>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className=' w-32 h-32 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
+                    <div className=' w-10 h-10 bg-prime'></div>
+                    <ul>
+                        <li>
+                            <h2>
+                                480kph
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                Top Speed
+                            </h2>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
             </div>
             <Footer/>
 
