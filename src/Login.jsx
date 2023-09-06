@@ -114,7 +114,7 @@ const Login = () => {
 
                                     <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                         Not a member? {' '}
-                                        <Link to="register" className="text-white">Sign up</Link>
+                                        <Link to="/register" className="text-white">Sign up</Link>
                                     </p>
                                 </div>
                             </form>
