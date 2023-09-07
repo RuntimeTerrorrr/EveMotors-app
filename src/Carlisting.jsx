@@ -1,10 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
-import AddCarPopup from './components/popups/AddCarPopup'
+import AddCarPopup from './components/popups/AddCarPopup';
+import ModelViewer from './components/ModelViewer';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Carlisting = () => {
+let Url = '/toyota_supra_a80_1993/scene.gltf';
 
+const Carlisting = () => {
+    const [cdnLink, setCdnLink]= useState('');
+
+    const handleCdnLinkChange = (value)=>{
+     
+        setCdnLink(value);
+    };
+
+    const fixedScale = [0.4, 0.4, 0.4]; 
+    const fixedTarget = [0, 0, 0];
+    
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,10 +39,17 @@ const Carlisting = () => {
                 ></div>
 
                 <div
-                    className=" mx-24 py-10  rounded-2xl  bg-prime relative flex justify-between items-center "
+                    className=" mx-24 py-10  rounded-2xl  bg-prime relative flex flex-col justify-between items-center "
                 >
-                 <AddCarPopup/>
+                 <AddCarPopup  onCdnLinkChange={handleCdnLinkChange} />
+                 <div className=" overflow-hidden h-[400px]">
+                <div className=''>
+                    <ModelViewer modelUrl={cdnLink} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
+            </div>
+
+                </div>
+               
             </section>
         </>
 

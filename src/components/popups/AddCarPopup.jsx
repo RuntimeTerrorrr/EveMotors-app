@@ -11,7 +11,8 @@ import { FormDashboard } from '../../services/Dashboard.service.js';
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
-const AddCarPopup = () => {
+const AddCarPopup = ({ onCdnLinkChange }) => {
+
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
 
@@ -54,6 +55,12 @@ const AddCarPopup = () => {
   formData.append("fixedScaleValue", fixedScaleValue);
   formData.append("fixedTargetValue", fixedTargetValue);
 
+  const handleChange = (e)=>{
+    
+    setModelCDN(e.target.value);
+    const newValue = e.target.value;
+    onCdnLinkChange(newValue);
+  }
 
   const [formSubmitted, setFormSubmitted] = React.useState(false);
 
@@ -414,7 +421,7 @@ const AddCarPopup = () => {
                     type="text"
                     id="modelCDN"
                     value={modelCDN}
-                    onChange={(e) => setModelCDN(e.target.value)}
+                    onChange={handleChange}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
                     required
                   />
