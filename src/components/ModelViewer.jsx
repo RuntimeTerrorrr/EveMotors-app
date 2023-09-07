@@ -7,6 +7,11 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
 const ModelViewer = ({ modelUrl,  fixedScale, fixedTarget}) => {
+  if (!modelUrl) {
+    return (
+      <p>No model URL provided.</p>
+    );
+  } else {
   const [modelDimensions, setModelDimensions] = useState({ width: 1, height: 1, depth: 1 });
 
   // Load the model and calculate dimensions
@@ -56,7 +61,9 @@ const ModelViewer = ({ modelUrl,  fixedScale, fixedTarget}) => {
       </Suspense>
     </Canvas>
   );
+  }
 };
+
 
 const Controls = ({ enableZoom, target }) => {
   const { camera, gl } = useThree();
