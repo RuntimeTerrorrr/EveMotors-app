@@ -19,9 +19,9 @@ const Supra = () => {
         <Header/>
         <div className=' '>
             <div className="     ">
-                <div className=" flex items-center rounded-[32px] mx-8  h-[500px] bg-prime">
+                <div className=" flex items-center max-sm:justify-center rounded-[32px] mx-8  h-[500px] bg-prime">
                 <div className='  px-8 '>
-                <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl   uppercase text-white ">Toyota Supra Mk-4</h1>
+                <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">Toyota Supra Mk-4</h1>
                 <p className=' text-white font-custom text-2xl  max-[900px]:w-auto '>The iconic sports car known for its timeless design and thrilling turbocharged performance.</p>
                 </div>
                 </div>
@@ -47,7 +47,7 @@ const Supra = () => {
                     <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
             </div>
-            <div className=' h-[500px] bg-prime mx-8 rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 items-center '>
+            <div className=' h-[500px] bg-prime mx-8 max-sm:h-auto max-sm:py-10   rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 max-sm:px-4 items-center '>
             <div  className=' max-[1200px]:order-2'>
             <div >
                 <div className=' grid grid-cols-2  gap-8 max-[1380px]:gap-4 '>
