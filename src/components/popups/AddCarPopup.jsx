@@ -11,7 +11,7 @@ import { FormDashboard } from '../../services/Dashboard.service.js';
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
-const AddCarPopup = ({ onCdnLinkChange }) => {
+const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange }) => {
 
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
@@ -55,11 +55,17 @@ const AddCarPopup = ({ onCdnLinkChange }) => {
   formData.append("fixedScaleValue", fixedScaleValue);
   formData.append("fixedTargetValue", fixedTargetValue);
 
-  const handleChange = (e)=>{
-    
+  const handleChangeCDN = (e) => {
+
     setModelCDN(e.target.value);
     const newValue = e.target.value;
     onCdnLinkChange(newValue);
+  }
+
+  const handleChangeScale = (e) => {
+    setFixedScaleValue(e.target.value);
+    const newValue = e.target.value;
+    onhandleScaleValueChange(newValue);
   }
 
   const [formSubmitted, setFormSubmitted] = React.useState(false);
@@ -380,7 +386,7 @@ const AddCarPopup = ({ onCdnLinkChange }) => {
                   htmlFor="imageLink4"
                   className="block text-sm font-medium text-white"
                 >
-                  Image Link4
+                  Target Value For X-axis
                 </label>
                 <input
                   type="text"
@@ -421,7 +427,7 @@ const AddCarPopup = ({ onCdnLinkChange }) => {
                     type="text"
                     id="modelCDN"
                     value={modelCDN}
-                    onChange={handleChange}
+                    onChange={handleChangeCDN}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
                     required
                   />
@@ -437,9 +443,18 @@ const AddCarPopup = ({ onCdnLinkChange }) => {
                     type="text"
                     id="fixedScaleValue"
                     value={fixedScaleValue}
-                    onChange={(e) => setFixedScaleValue(e.target.value)}
+                    onChange={handleChangeScale}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
                     required
+                  />
+                  <input
+                    type="range"
+                    min="0"
+                    max="3"
+                    step="0.1"
+                    onChange={handleChangeScale}
+                    value={fixedScaleValue}
+                    id="fixedScaleRange"
                   />
                 </div>
                 <div>
@@ -447,7 +462,7 @@ const AddCarPopup = ({ onCdnLinkChange }) => {
                     htmlFor="fixedTargetValue"
                     className="block text-sm font-medium text-white"
                   >
-                    Image Link5
+                    Target Value For X-axis
                   </label>
                   <input
                     type="text"

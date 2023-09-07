@@ -8,13 +8,16 @@ let Url = '/toyota_supra_a80_1993/scene.gltf';
 
 const Carlisting = () => {
     const [cdnLink, setCdnLink]= useState('');
+    const [scaleValue, setScaleValue]= useState('');
 
     const handleCdnLinkChange = (value)=>{
      
         setCdnLink(value);
     };
-
-    const fixedScale = [0.4, 0.4, 0.4]; 
+    const handleScaleValueChange =(value)=>{
+        setScaleValue(value);
+    }
+    const fixedScale = [ scaleValue, scaleValue, scaleValue ]; 
     const fixedTarget = [0, 0, 0];
     
     const navigate = useNavigate();
@@ -41,8 +44,8 @@ const Carlisting = () => {
                 <div
                     className=" mx-24 py-10  rounded-2xl  bg-prime relative flex flex-col justify-between items-center "
                 >
-                 <AddCarPopup  onCdnLinkChange={handleCdnLinkChange} />
-                 <div className=" overflow-hidden h-[400px]">
+                 <AddCarPopup  onCdnLinkChange={handleCdnLinkChange} onhandleScaleValueChange={handleScaleValueChange} />
+                 <div className=" overflow-hidden ">
                 <div className=''>
                     <ModelViewer modelUrl={cdnLink} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>
