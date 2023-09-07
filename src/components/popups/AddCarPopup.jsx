@@ -30,9 +30,9 @@ const AddCarPopup = () => {
   const [imageLink2, setImageLink2] = React.useState('');
   const [imageLink3, setImageLink3] = React.useState('');
   const [imageLink4, setImageLink4] = React.useState('');
-  const [imageLink5, setImageLink5] = React.useState('');
   const [modelCDN, setModelCDN] = React.useState('');
   const [fixedScaleValue, setFixedScaleValue] = React.useState('');
+  const [fixedTargetValue, setfixedTargetValue] = React.useState('');
 
   let formData = new FormData();
   formData.append("makeModel", makeModel);
@@ -50,9 +50,9 @@ const AddCarPopup = () => {
   formData.append("imageLink2", imageLink2);
   formData.append("imageLink3", imageLink3);
   formData.append("imageLink4", imageLink4);
-  formData.append("imageLink5", imageLink5);
   formData.append("modelCDN", modelCDN);
   formData.append("fixedScaleValue", fixedScaleValue);
+  formData.append("fixedTargetValue", fixedTargetValue);
 
 
   const [formSubmitted, setFormSubmitted] = React.useState(false);
@@ -437,16 +437,16 @@ const AddCarPopup = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="imageLink5"
+                    htmlFor="fixedTargetValue"
                     className="block text-sm font-medium text-white"
                   >
                     Image Link5
                   </label>
                   <input
                     type="text"
-                    id="imageLink5"
-                    value={imageLink5}
-                    onChange={(e) => setImageLink5(e.target.value)}
+                    id="fixedTargetValue"
+                    value={fixedTargetValue}
+                    onChange={(e) => setfixedTargetValue(e.target.value)}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
                     required
                   />
