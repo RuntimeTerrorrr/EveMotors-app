@@ -90,10 +90,10 @@ const Home = () => {
                       <div className="">
                         <div className=" ">
                           <p className=" text-white">
-                            {car.intro}
+                            {car.registeredIn}
                           </p>
                           <p className=" text-white">
-                            Registered in {car.registeredIn}
+                            Registered in {car.assembledIn}
                           </p>
                         </div>
                       </div>
