@@ -22,6 +22,8 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   const [assembledIn, setAssembledIn] = React.useState('');
   const [intro, setIntro] = React.useState('');
   const [engine, setEngine] = React.useState('');
+  const [displacement, setDisplacement] = React.useState('');
+  const [transmission, setTransmission] = React.useState('');
   const [torque, setTorque] = React.useState('');
   const [power, setPower] = React.useState('');
   const [topSpeed, setTopSpeed] = React.useState('');
@@ -49,6 +51,8 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   formData.append("assembledIn", assembledIn);
   formData.append("intro", intro);
   formData.append("engine", engine);
+  formData.append("displacement", displacement);
+  formData.append("transmission", transmission);
   formData.append("torque", torque);
   formData.append("power", power);
   formData.append("topSpeed", topSpeed);
@@ -265,6 +269,38 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
                   id="engine"
                   value={engine}
                   onChange={(e) => setEngine(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="displacement"
+                  className="block text-sm font-medium text-white"
+                >
+                  Displacement
+                </label>
+                <input
+                  type="text"
+                  id="displacement"
+                  value={displacement}
+                  onChange={(e) => setDisplacement(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="transmission"
+                  className="block text-sm font-medium text-white"
+                >
+                  Displacement
+                </label>
+                <input
+                  type="text"
+                  id="transmission"
+                  value={transmission}
+                  onChange={(e) => setTransmission(e.target.value)}
                   className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
                   required
                 />
