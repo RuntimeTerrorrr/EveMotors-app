@@ -33,12 +33,14 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   const [imageLink4, setImageLink4] = React.useState('');
   const [modelCDN, setModelCDN] = React.useState('');
   const [fixedScaleValue, setFixedScaleValue] = React.useState('');
-  const [fixedTargetValue, setfixedTargetValue] = React.useState('');
+  const [fixedTargetValue, setfixedTargetValue] = React.useState([ '', '', '']);
   const [fixedTargetValueX, setfixedTargetValueX] = React.useState('');
   const [fixedTargetValueY, setfixedTargetValueY] = React.useState('');
   const [fixedTargetValueZ, setfixedTargetValueZ] = React.useState('');
 
-
+  React.useEffect(()=>{
+    setfixedTargetValue([fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
+  }, [fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
 
   let formData = new FormData();
   formData.append("makeModel", makeModel);
