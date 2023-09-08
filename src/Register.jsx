@@ -20,7 +20,7 @@ export default function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    if (!firstName || !lastName || !email || !password) {
+    if (!firstName || !lastName || !email || !password || !passwordConfirmation) {
       setError('Please fill in all fields.');
       return;
     };
@@ -190,6 +190,7 @@ export default function Register() {
                       onChange={(e) => setPasswordConfirmation(e.target.value)}
 
                     />
+                    <div className="error text-sm text-prime">{error}</div>
                     <div className="error text-sm text-prime">{PassError}</div>
                   </div>
 
