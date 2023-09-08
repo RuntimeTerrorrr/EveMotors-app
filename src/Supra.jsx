@@ -9,7 +9,7 @@ import EngineIcon from '../src/assets/Icons/engine.png';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ModelViewer from "./components/ModelViewer.jsx";
-let Url = '/toyota_supra_a80_1993/scene.gltf'
+let Url = '/toyota_supra_a80_1993/scene.gltf';
 
 const Supra = () => {
     const fixedScale = [0.4, 0.4, 0.4]; 
