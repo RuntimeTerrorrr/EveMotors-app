@@ -11,7 +11,7 @@ import { FormDashboard } from '../../services/Dashboard.service.js';
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
-const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange }) => {
+const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChangeTargetX, onhandleChangeTargetY, onhandleChangeTargetZ }) => {
 
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
@@ -34,6 +34,11 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange }) => {
   const [modelCDN, setModelCDN] = React.useState('');
   const [fixedScaleValue, setFixedScaleValue] = React.useState('');
   const [fixedTargetValue, setfixedTargetValue] = React.useState('');
+  const [fixedTargetValueX, setfixedTargetValueX] = React.useState('');
+  const [fixedTargetValueY, setfixedTargetValueY] = React.useState('');
+  const [fixedTargetValueZ, setfixedTargetValueZ] = React.useState('');
+
+
 
   let formData = new FormData();
   formData.append("makeModel", makeModel);
@@ -66,6 +71,21 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange }) => {
     setFixedScaleValue(e.target.value);
     const newValue = e.target.value;
     onhandleScaleValueChange(newValue);
+  }
+  const handleChangeTargetX = (e) => {
+    setfixedTargetValueX(e.target.value);
+    const newValue = e.target.value;
+    onhandleChangeTargetX(newValue)
+  }
+  const handleChangeTargetY = (e) => {
+    setfixedTargetValueY(e.target.value);
+    const newValue = e.target.value;
+    onhandleChangeTargetY(newValue);
+  }
+  const handleChangeTargetZ = (e) => {
+    setfixedTargetValueZ(e.target.value);
+    const newValue = e.target.value;
+    onhandleChangeTargetZ(newValue);
   }
 
   const [formSubmitted, setFormSubmitted] = React.useState(false);
@@ -462,7 +482,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange }) => {
                     htmlFor="fixedTargetValue"
                     className="block text-sm font-medium text-white"
                   >
-                    Target Value For X-axis
+                    Target Value
                   </label>
                   <input
                     type="text"
@@ -471,6 +491,80 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange }) => {
                     onChange={(e) => setfixedTargetValue(e.target.value)}
                     className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
                     required
+                  />
+
+                </div>
+                <div>
+                  <label
+                    htmlFor="fixedTargetValue"
+                    className="block text-sm font-medium text-white"
+                  >
+                    Target Value X-axis
+                  </label>
+                  <input
+                    type="text"
+                    id="fixedTargetValueX"
+                    value={fixedTargetValueX}
+                    onChange={(e) => setfixedTargetValue(e.target.value)}
+                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                    required
+                  />
+                  <input
+                    type="range"
+                    min="0"
+                    max="3"
+                    step="0.1"
+                    onChange={handleChangeTargetX}
+                    value={fixedTargetValueX}
+                    id="fixedScaleRange"
+                  />
+                   <label
+                    htmlFor="fixedTargetValueY"
+                    className="block text-sm font-medium text-white"
+                  >
+                    Target Value Y-axis
+                  </label>
+                  <input
+                    type="text"
+                    id="fixedTargetValueY"
+                    value={fixedTargetValueY}
+                    onChange={(e) => setfixedTargetValueY(e.target.value)}
+                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                    required
+                  />
+
+                  <input
+                    type="range"
+                    min="0"
+                    max="3"
+                    step="0.1"
+                    onChange={handleChangeTargetY}
+                    value={fixedTargetValueY}
+                    id="fixedTargetValueY"
+                  />
+                     <label
+                    htmlFor="fixedTargetValueZ"
+                    className="block text-sm font-medium text-white"
+                  >
+                    Target Value Y-axis
+                  </label>
+                  <input
+                    type="text"
+                    id="fixedTargetValueZ"
+                    value={fixedTargetValueZ}
+                    onChange={(e) => setfixedTargetValueZ(e.target.value)}
+                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                    required
+                  />
+
+                  <input
+                    type="range"
+                    min="0"
+                    max="3"
+                    step="0.1"
+                    onChange={handleChangeTargetZ}
+                    value={fixedTargetValueZ}
+                    id="fixedTargetValueZ"
                   />
                 </div>
               </div>

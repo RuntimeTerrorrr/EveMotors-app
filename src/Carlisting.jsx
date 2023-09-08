@@ -8,7 +8,11 @@ let Url = '/toyota_supra_a80_1993/scene.gltf';
 
 const Carlisting = () => {
     const [cdnLink, setCdnLink]= useState('');
-    const [scaleValue, setScaleValue]= useState('');
+    const [scaleValue, setScaleValue]= useState('1');
+    const [targetX, setTargetX] = useState('0');
+    const [targetY, setTargetY] = useState('0');
+    const [targetZ, setTargetZ] = useState('0');
+
 
     const handleCdnLinkChange = (value)=>{
      
@@ -16,9 +20,24 @@ const Carlisting = () => {
     };
     const handleScaleValueChange =(value)=>{
         setScaleValue(value);
-    }
+    };
+    const handleChangeTargetX = (value) => {
+        const parsedValue = parseInt(value, 10);
+        setTargetX(parsedValue);
+      };
+
+      const handleChangeTargetY = (value) => {
+        const parsedValue = parseInt(value, 10);
+        setTargetY(parsedValue);
+      };
+
+      const handleChangeTargetZ = (value) => {
+        const parsedValue = parseInt(value, 10);
+        setTargetZ(parsedValue);
+      };
+    
     const fixedScale = [ scaleValue, scaleValue, scaleValue ]; 
-    const fixedTarget = [0, 0, 0];
+    const fixedTarget = [targetX, targetY, targetZ];
     
     const navigate = useNavigate();
 
@@ -44,8 +63,8 @@ const Carlisting = () => {
                 <div
                     className=" mx-24 py-10  rounded-2xl  bg-prime relative flex flex-col justify-between items-center "
                 >
-                 <AddCarPopup  onCdnLinkChange={handleCdnLinkChange} onhandleScaleValueChange={handleScaleValueChange} />
-                 <div className=" overflow-hidden ">
+                 <AddCarPopup  onCdnLinkChange={handleCdnLinkChange} onhandleScaleValueChange={handleScaleValueChange} onhandleChangeTargetX={handleChangeTargetX} onhandleChangeTargetY={handleChangeTargetY} onhandleChangeTargetZ={handleChangeTargetZ} />
+                 <div className=" overflow-hidden mt-32 ">
                 <div className=''>
                     <ModelViewer modelUrl={cdnLink} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                 </div>

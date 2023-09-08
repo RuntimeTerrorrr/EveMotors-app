@@ -67,7 +67,7 @@ const Controls = ({ enableZoom, target }) => {
   useFrame(() => controlsRef.current.update());
 
   return (
-    <orbitControls ref={controlsRef} args={[camera, gl.domElement]} enableZoom={enableZoom} target={target} />
+    <orbitControls ref={controlsRef} args={[camera, gl.domElement]} enableZoom={false} target={target} />
   );
 };
 
