@@ -294,7 +294,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
                   htmlFor="transmission"
                   className="block text-sm font-medium text-white"
                 >
-                  Displacement
+                Transmission
                 </label>
                 <input
                   type="text"
