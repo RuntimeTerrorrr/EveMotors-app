@@ -14,7 +14,9 @@ const FormDashboard = () => {
         }
     }, [navigate]);
 
-
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+    };
     return (
         <>
             <section
@@ -48,6 +50,9 @@ const FormDashboard = () => {
 
                             <Link to="/" className="block w-full rounded-[12px] border hover:border-prime hover:bg-transparent px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto">
                                 Back to Home</Link>
+
+                            <Link to="/login" onClick={handleLogout} className="block w-full rounded-[12px] border hover:border-prime hover:bg-transparent px-12 py-3 text-sm font-medium text-orange-red/75 shadow hover:text-orange-red focus:outline-none focus:ring active:text-orange-red sm:w-auto">
+                                logout</Link>
                         </div>
                     </div>
                     <div className=''>
