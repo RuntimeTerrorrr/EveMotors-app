@@ -7,9 +7,13 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
 const ModelViewer = ({ modelUrl,  fixedScale, fixedTarget}) => {
+  if (!modelUrl) {
+    return (
+      <p>No model URL provided.</p>
+    );
+  } else {
   const [modelDimensions, setModelDimensions] = useState({ width: 1, height: 1, depth: 1 });
 
-  // Load the model and calculate dimensions
   useEffect(() => {
     const loader = new GLTFLoader();
     loader.load(modelUrl, (gltf) => {
@@ -18,22 +22,18 @@ const ModelViewer = ({ modelUrl,  fixedScale, fixedTarget}) => {
       const modelHeight = boundingBox.max.y - boundingBox.min.y;
       const modelDepth = boundingBox.max.z - boundingBox.min.z;
 
-      // Determine the maximum dimension (width, height, or depth)
       const maxDimension = Math.max(modelWidth, modelHeight, modelDepth);
 
-      // Calculate the desired scale based on the maximum dimension and screen width
       const screenWidth = window.innerWidth;
-      const desiredWidth = screenWidth * 0.8; // 80% of screen width
+      const desiredWidth = screenWidth * 0.8; 
       const scaleFactor = desiredWidth / maxDimension;
       setFixedScale([scaleFactor, scaleFactor, scaleFactor]);
 
-      // Set the target point at the center of the model's bounding box
       const targetX = (boundingBox.max.x + boundingBox.min.x) / 2;
       const targetY = (boundingBox.max.y + boundingBox.min.y) / 2;
       const targetZ = (boundingBox.max.z + boundingBox.min.z) / 2;
       setFixedTarget([targetX, targetY, targetZ]);
 
-      // Store the model's dimensions
       setModelDimensions({ width: modelWidth, height: modelHeight, depth: modelDepth });
     });
   }, [modelUrl]);
@@ -56,7 +56,9 @@ const ModelViewer = ({ modelUrl,  fixedScale, fixedTarget}) => {
       </Suspense>
     </Canvas>
   );
+  }
 };
+
 
 const Controls = ({ enableZoom, target }) => {
   const { camera, gl } = useThree();
@@ -65,7 +67,7 @@ const Controls = ({ enableZoom, target }) => {
   useFrame(() => controlsRef.current.update());
 
   return (
-    <orbitControls ref={controlsRef} args={[camera, gl.domElement]} enableZoom={enableZoom} target={target} />
+    <orbitControls ref={controlsRef} args={[camera, gl.domElement]} enableZoom={false} target={target} />
   );
 };
 
