@@ -32,7 +32,7 @@ const Home = () => {
     }
   }
 
-  
+
   return (
     <>
       <section
@@ -61,6 +61,7 @@ const Home = () => {
           </div>
           <div className=" absolute   max-[600px]:relative max-[600px]:flex max-[600px]:flex-col max-[600px]:gap-4 mt-8   text-center">
             <a
+              href="#list"
               onClick={scrollToTarget}
               className="inline-block shrink-0 rounded-[13px]    bg-[#FF001D] px-12 py-3 max-[600px]:px-6  mr-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-orange-red focus:outline-none focus:ring active:text-orange-red"
             >
