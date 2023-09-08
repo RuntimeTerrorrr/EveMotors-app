@@ -11,19 +11,19 @@ const Footer= ()=>{
            <div className="  grid grid-cols-3 max-[900px]:grid-cols-1 gap-8">
             <a href="">
            <div className=" w-64 cursor-pointer hover:bg-[#F5F5F5] max-[1350px]:w-auto  max-[440px]:w-[200px] max-[1350px]:px-6  h-16 bg-white rounded-[18px] flex justify-center items-center gap-3 ">
-              <img className=" h-12" src={Github} alt="" srcset="" />
+              <img className=" h-12" src={Github} alt="" srcSet="" />
               <h2 className=" font-custom font-bold">Github</h2>
             </div>
             </a>
             <a href="">
             <div className=" w-64  cursor-pointer hover:bg-[#F5F5F5] max-[1350px]:w-auto  max-[440px]:w-[200px] max-[1350px]:px-6  h-16 bg-white rounded-[18px] flex justify-center items-center gap-3 ">
-            <img className=" h-12" src={Behnace} alt="" srcset="" />
+            <img className=" h-12" src={Behnace} alt="" srcSet="" />
               <h2 className=" font-custom font-bold">Behance</h2>
             </div>
             </a>
             <a href="">
             <div className=" w-64 cursor-pointer hover:bg-[#F5F5F5] max-[1350px]:w-auto  max-[440px]:w-[200px] max-[1350px]:px-6 h-16 bg-white rounded-[18px] flex justify-center items-center gap-3 ">
-            <img className=" h-12" src={Linkedin} alt="" srcset="" />
+            <img className=" h-12" src={Linkedin} alt="" srcSet="" />
               <h2 className=" font-custom font-bold">Linkedin</h2>
             </div>
             </a>  
