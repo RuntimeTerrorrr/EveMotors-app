@@ -36,37 +36,14 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   const [coverImageUrl, setCoverImageUrl] = React.useState('');
   const [modelCDN, setModelCDN] = React.useState('');
   const [fixedScaleValue, setFixedScaleValue] = React.useState('');
-  const [fixedTargetValue, setfixedTargetValue] = React.useState([ '', '', '']);
+  const [fixedTargetValue, setfixedTargetValue] = React.useState(['', '', '']);
   const [fixedTargetValueX, setfixedTargetValueX] = React.useState('');
   const [fixedTargetValueY, setfixedTargetValueY] = React.useState('');
   const [fixedTargetValueZ, setfixedTargetValueZ] = React.useState('');
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     setfixedTargetValue([fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
   }, [fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
-
-  let formData = new FormData();
-  formData.append("makeModel", makeModel);
-  formData.append("variant", variant);
-  formData.append("registeredIn", registeredIn);
-  formData.append("assembledIn", assembledIn);
-  formData.append("intro", intro);
-  formData.append("engine", engine);
-  formData.append("displacement", displacement);
-  formData.append("transmission", transmission);
-  formData.append("torque", torque);
-  formData.append("power", power);
-  formData.append("topSpeed", topSpeed);
-  formData.append("bodyType", bodyType);
-  formData.append("category", category);
-  formData.append("imageLink1", imageLink1);
-  formData.append("imageLink2", imageLink2);
-  formData.append("imageLink3", imageLink3);
-  formData.append("imageLink4", imageLink4);
-  formData.append("coverImageUrl", coverImageUrl);
-  formData.append("modelCDN", modelCDN);
-  formData.append("fixedScaleValue", fixedScaleValue);
-  formData.append("fixedTargetValue", fixedTargetValue);
 
   const handleChangeCDN = (e) => {
 
@@ -146,6 +123,29 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   };
 
   const handleSubmit = () => {
+    let formData = new FormData();
+    formData.append("makeModel", makeModel);
+    formData.append("variant", variant);
+    formData.append("registeredIn", registeredIn);
+    formData.append("assembledIn", assembledIn);
+    formData.append("intro", intro);
+    formData.append("engine", engine);
+    formData.append("displacement", displacement);
+    formData.append("transmission", transmission);
+    formData.append("torque", torque);
+    formData.append("power", power);
+    formData.append("topSpeed", topSpeed);
+    formData.append("bodyType", bodyType);
+    formData.append("category", category);
+    formData.append("imageLink1", imageLink1);
+    formData.append("imageLink2", imageLink2);
+    formData.append("imageLink3", imageLink3);
+    formData.append("imageLink4", imageLink4);
+    formData.append("coverImageUrl", coverImageUrl);
+    formData.append("modelCDN", modelCDN);
+    formData.append("fixedScaleValue", fixedScaleValue);
+    formData.append("fixedTargetValue", fixedTargetValue);
+
     console.log('Form Data:', formData);
     setFormSubmitted(true);
   };
@@ -296,7 +296,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
                   htmlFor="transmission"
                   className="block text-sm font-medium text-white"
                 >
-                Transmission
+                  Transmission
                 </label>
                 <input
                   type="text"
@@ -463,166 +463,154 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
         {activeStep === 3 && (
           <>
             <div className="grid grid-cols-2  px-10 gap-4 mt-10">
-              {/* <div className="flex items-center justify-center w-full">
-                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                  <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                    <svg className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                    </svg>
-                    <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                  </div>
-                  <input id="dropzone-file" type="file" className="hidden" />
-                </label>
-              </div> */}
-              {/* <div> */}
-                <div>
-                  <label
-                    htmlFor="modelCDN"
-                    className="block text-sm font-medium text-white"
-                  >
+              
+              <div>
+                <label
+                  htmlFor="modelCDN"
+                  className="block text-sm font-medium text-white"
+                >
                   Cover Image Url
-                  </label>
-                  <input
-                    type="text"
-                    id="coverImageUrl"
-                    value={coverImageUrl}
-                    onChange={(e) => setCoverImageUrl(e.target.value)}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="modelCDN"
-                    className="block text-sm font-medium text-white"
-                  >
-                    3D Model CDN
-                  </label>
-                  <input
-                    type="text"
-                    id="modelCDN"
-                    value={modelCDN}
-                    onChange={handleChangeCDN}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="fixedScaleValue"
-                    className="block text-sm font-medium text-white"
-                  >
-                    FixedScale Value
-                  </label>
-                  <input
-                    type="text"
-                    id="fixedScaleValue"
-                    value={fixedScaleValue}
-                    onChange={handleChangeScale}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
-                  <input
-                    type="range"
-                    min="0"
-                    max="3"
-                    step="0.1"
-                    onChange={handleChangeScale}
-                    value={fixedScaleValue}
-                    id="fixedScaleRange"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="fixedTargetValue"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Target Value
-                  </label>
-                  <input
-                    type="text"
-                    id="fixedTargetValue"
-                    value={fixedTargetValue}
-                    onChange={(e) => setfixedTargetValue(e.target.value)}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
+                </label>
+                <input
+                  type="text"
+                  id="coverImageUrl"
+                  value={coverImageUrl}
+                  onChange={(e) => setCoverImageUrl(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="modelCDN"
+                  className="block text-sm font-medium text-white"
+                >
+                  3D Model CDN
+                </label>
+                <input
+                  type="text"
+                  id="modelCDN"
+                  value={modelCDN}
+                  onChange={handleChangeCDN}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="fixedScaleValue"
+                  className="block text-sm font-medium text-white"
+                >
+                  FixedScale Value
+                </label>
+                <input
+                  type="text"
+                  id="fixedScaleValue"
+                  value={fixedScaleValue}
+                  onChange={handleChangeScale}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="3"
+                  step="0.1"
+                  onChange={handleChangeScale}
+                  value={fixedScaleValue}
+                  id="fixedScaleRange"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="fixedTargetValue"
+                  className="block text-sm font-medium text-white"
+                >
+                  Target Value
+                </label>
+                <input
+                  type="text"
+                  id="fixedTargetValue"
+                  value={fixedTargetValue}
+                  onChange={(e) => setfixedTargetValue(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
 
-                </div>
-                <div>
-                  <label
-                    htmlFor="fixedTargetValue"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Target Value X-axis
-                  </label>
-                  <input
-                    type="text"
-                    id="fixedTargetValueX"
-                    value={fixedTargetValueX}
-                    onChange={(e) => setfixedTargetValue(e.target.value)}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
-                  <input
-                    type="range"
-                    min="0"
-                    max="3"
-                    step="0.1"
-                    onChange={handleChangeTargetX}
-                    value={fixedTargetValueX}
-                    id="fixedScaleRange"
-                  />
-                   <label
-                    htmlFor="fixedTargetValueY"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Target Value Y-axis
-                  </label>
-                  <input
-                    type="text"
-                    id="fixedTargetValueY"
-                    value={fixedTargetValueY}
-                    onChange={(e) => setfixedTargetValueY(e.target.value)}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
+              </div>
+              <div>
+                <label
+                  htmlFor="fixedTargetValue"
+                  className="block text-sm font-medium text-white"
+                >
+                  Target Value X-axis
+                </label>
+                <input
+                  type="text"
+                  id="fixedTargetValueX"
+                  value={fixedTargetValueX}
+                  onChange={(e) => setfixedTargetValue(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="3"
+                  step="0.1"
+                  onChange={handleChangeTargetX}
+                  value={fixedTargetValueX}
+                  id="fixedScaleRange"
+                />
+                <label
+                  htmlFor="fixedTargetValueY"
+                  className="block text-sm font-medium text-white"
+                >
+                  Target Value Y-axis
+                </label>
+                <input
+                  type="text"
+                  id="fixedTargetValueY"
+                  value={fixedTargetValueY}
+                  onChange={(e) => setfixedTargetValueY(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
 
-                  <input
-                    type="range"
-                    min="0"
-                    max="3"
-                    step="0.1"
-                    onChange={handleChangeTargetY}
-                    value={fixedTargetValueY}
-                    id="fixedTargetValueY"
-                  />
-                     <label
-                    htmlFor="fixedTargetValueZ"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Target Value Y-axis
-                  </label>
-                  <input
-                    type="text"
-                    id="fixedTargetValueZ"
-                    value={fixedTargetValueZ}
-                    onChange={(e) => setfixedTargetValueZ(e.target.value)}
-                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
-                    required
-                  />
+                <input
+                  type="range"
+                  min="0"
+                  max="3"
+                  step="0.1"
+                  onChange={handleChangeTargetY}
+                  value={fixedTargetValueY}
+                  id="fixedTargetValueY"
+                />
+                <label
+                  htmlFor="fixedTargetValueZ"
+                  className="block text-sm font-medium text-white"
+                >
+                  Target Value Y-axis
+                </label>
+                <input
+                  type="text"
+                  id="fixedTargetValueZ"
+                  value={fixedTargetValueZ}
+                  onChange={(e) => setfixedTargetValueZ(e.target.value)}
+                  className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                  required
+                />
 
-                  <input
-                    type="range"
-                    min="0"
-                    max="3"
-                    step="0.1"
-                    onChange={handleChangeTargetZ}
-                    value={fixedTargetValueZ}
-                    id="fixedTargetValueZ"
-                  />
-                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="3"
+                  step="0.1"
+                  onChange={handleChangeTargetZ}
+                  value={fixedTargetValueZ}
+                  id="fixedTargetValueZ"
+                />
+              </div>
               {/* </div> */}
             </div>
           </>
