@@ -13,6 +13,7 @@ const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image']
 
 const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChangeTargetX, onhandleChangeTargetY, onhandleChangeTargetZ }) => {
 
+  const navigate = useNavigate();
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
 
@@ -151,7 +152,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
 
     FormDashboard(formData)
     .then(() => {
-      
+      navigate('/dashboard')
     })
     .catch((error) => {
       console.error(error);
