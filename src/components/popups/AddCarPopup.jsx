@@ -5,6 +5,7 @@ import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Fragment } from 'react';
 import 'tailwindcss/tailwind.css';
 import { FormDashboard } from '../../services/Dashboard.service.js';
 import { useNavigate } from 'react-router-dom';
@@ -158,7 +159,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
         console.error(error);
       })
   };
-  
+
   return (
     <Box className="flex flex-col justify-between" sx={{ width: '100%', px: '20px', height: '400px' }}>
       <Stepper nonLinear activeStep={activeStep}>
