@@ -10,21 +10,20 @@ import LoaderAnimation from "./components/Loader.jsx";
 const Home = () => {
 
   const [getCars, setCars] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+
 
   useEffect(() => {
     async function Cars() {
       try {
         const carData = await FetchedCars();
         setCars(carData);
-        setIsLoading(true);
       } catch (error) {
         console.error(error);
       }
     }
 
     Cars();
-  }, []).isLoading(false);
+  }, [])
 
 
   function scrollToTarget() {
@@ -81,10 +80,6 @@ const Home = () => {
 
       <div id="list">
 
-        {isLoading ? (
-          <LoaderAnimation />
-        ) : (
-
           <div className=" " >
             <div className=" mx-8 max-[440px]:mx-4 mt-6 grid grid-cols-3 max-[1200px]:grid-cols-2 max-[750px]:grid-cols-1 gap-4">
 
@@ -116,8 +111,6 @@ const Home = () => {
             </div>
 
           </div>
-
-        )}
       </div >
 
       <Footer />
