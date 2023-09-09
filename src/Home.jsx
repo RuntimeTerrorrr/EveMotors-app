@@ -75,12 +75,15 @@ const Home = () => {
         </div>
       </section>
 
+
       <div id="list">
-        {getCars.map((car) => {
-          return (
-            <div className=" " key={car._id}>
-              <div className=" mx-8 max-[440px]:mx-4 mt-6 grid grid-cols-3 max-[1200px]:grid-cols-2 max-[750px]:grid-cols-1 gap-4">
-                <Link to={`/car/${car._id}`} className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E] hover:bg-prime rounded-[24px] relative flex  justify-start items-center">
+
+        <div className=" " >
+          <div className=" mx-8 max-[440px]:mx-4 mt-6 grid grid-cols-3 max-[1200px]:grid-cols-2 max-[750px]:grid-cols-1 gap-4">
+            
+            {getCars.map((car) => {
+              return (
+                <Link key={car._id} to={`/car/${car._id}`} className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E] hover:bg-prime rounded-[24px] relative flex  justify-start items-center">
                   <div className=" absolute right-4 z-50   flex transition-all">
                     <img className=" group-hover:w-96 transition-all w-64 z-50" src="supra-mk4.png" alt="" srcSet="" />
                   </div>
@@ -100,12 +103,18 @@ const Home = () => {
                     </div>
                   </div>
                 </Link>
-              </div>
-            </div>
-          );
-        })}
 
-      </div>
+              );
+            })}
+          </div>
+
+        </div>
+
+
+
+
+
+      </div >
 
       <Footer />
     </>
