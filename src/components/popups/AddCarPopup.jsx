@@ -33,6 +33,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   const [imageLink2, setImageLink2] = React.useState('');
   const [imageLink3, setImageLink3] = React.useState('');
   const [imageLink4, setImageLink4] = React.useState('');
+  const [coverImageUrl, setCoverImageUrl] = React.useState('');
   const [modelCDN, setModelCDN] = React.useState('');
   const [fixedScaleValue, setFixedScaleValue] = React.useState('');
   const [fixedTargetValue, setfixedTargetValue] = React.useState([ '', '', '']);
@@ -62,6 +63,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   formData.append("imageLink2", imageLink2);
   formData.append("imageLink3", imageLink3);
   formData.append("imageLink4", imageLink4);
+  formData.append("coverImageUrl", coverImageUrl);
   formData.append("modelCDN", modelCDN);
   formData.append("fixedScaleValue", fixedScaleValue);
   formData.append("fixedTargetValue", fixedTargetValue);
@@ -460,8 +462,8 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
         )}
         {activeStep === 3 && (
           <>
-            <div className="grid grid-cols-2 px-10 gap-4 mt-10">
-              <div className="flex items-center justify-center w-full">
+            <div className="grid grid-cols-2  px-10 gap-4 mt-10">
+              {/* <div className="flex items-center justify-center w-full">
                 <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <svg className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
@@ -472,8 +474,24 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
                   </div>
                   <input id="dropzone-file" type="file" className="hidden" />
                 </label>
-              </div>
-              <div>
+              </div> */}
+              {/* <div> */}
+                <div>
+                  <label
+                    htmlFor="modelCDN"
+                    className="block text-sm font-medium text-white"
+                  >
+                  Cover Image Url
+                  </label>
+                  <input
+                    type="text"
+                    id="coverImageUrl"
+                    value={coverImageUrl}
+                    onChange={(e) => setCoverImageUrl(e.target.value)}
+                    className="mt-1 w-full rounded-md border bg-white text-sm shadow-sm p-2"
+                    required
+                  />
+                </div>
                 <div>
                   <label
                     htmlFor="modelCDN"
@@ -605,7 +623,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
                     id="fixedTargetValueZ"
                   />
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </>
         )}
