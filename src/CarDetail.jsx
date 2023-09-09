@@ -43,14 +43,14 @@ const CarDetail = () => {
     return (
         <>
             <Header />
-
+            {carData ? (
                 <div>
 
                     <div className=' '>
                         <div className="     ">
                             <div className=" flex items-center max-sm:justify-center rounded-[32px] mx-8  h-[500px] bg-prime">
                                 <div className='  px-8 '>
-                                    <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">Toyota Supra MK4</h1>
+                                    <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">{locationCarData.makeModel}</h1>
                                     <p className=' text-white font-custom text-2xl  max-[900px]:w-auto '>The iconic sports car known for its timeless design and thrilling turbocharged performance.</p>
                                 </div>
                             </div>
@@ -231,6 +231,8 @@ const CarDetail = () => {
                         </div>
                     </div>
                 </div>
+            ) : (<div>Loading car data...</div>
+            )}
 
             <Footer />
 
