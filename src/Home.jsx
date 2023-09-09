@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Background from '../src/assets/mainbackground.png';
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import LoaderAnimation from "./components/Loader.jsx";
 
 
 const Home = () => {
