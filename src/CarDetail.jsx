@@ -14,15 +14,27 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchCarById } from './services/fetchCarById.service.js'
 
-
 const CarDetail = () => {
     const { carId } = useParams();
     const [carData, setCarData] = useState(null);
   
     useEffect(() => {
       async function fetchData() {
-        const data = await fetchCarById(carId); // Fetch car data by ID
-        setCarData(data);
+        try {
+          const data = await fetchCarById(carId); // Fetch car data by ID
+  
+          if (data) {
+            // If data is available, update the carData state
+            setCarData(data);
+          } else {
+            // Handle the case when the car data is not found or an error occurs
+            console.error('Car not found or an error occurred.');
+            // You can set an appropriate error message or redirect the user to an error page.
+          }
+        } catch (error) {
+          console.error('Error while fetching car data:', error);
+          // Handle the error, e.g., show an error message to the user or redirect to an error page.
+        }
       }
   
       fetchData();
