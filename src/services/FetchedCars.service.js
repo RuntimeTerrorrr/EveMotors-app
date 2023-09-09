@@ -8,8 +8,8 @@ export const FetchedCars = async () => {
         let response = await axios.get(API_URL + 'cars')
 
         return response.data;
-        
-    } catch (error){
+
+    } catch (error) {
         console.log(error)
     }
 };
