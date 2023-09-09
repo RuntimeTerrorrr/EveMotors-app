@@ -10,36 +10,23 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import ModelViewer from "./components/ModelViewer.jsx";
 let Url = '/toyota_supra_a80_1993/scene.gltf';
-import { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchCarById } from './services/fetchCarById.service.js'
 
 
 const CarDetail = () => {
-    
     const { carId } = useParams();
     const [carData, setCarData] = useState(null);
-    
-    const location = useLocation();
-    const locationCarData  = location.state?.carData;
-
+  
     useEffect(() => {
-        async function fetchCarData() {
-            try {
-                const response = await fetch(`/cars/${carId}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    setCarData(data);
-                } else {
-                    console.error('Failed to fetch car data');
-                }
-            } catch (error) {
-                console.error(error);
-            }
-        }
-
-        fetchCarData();
+      async function fetchData() {
+        const data = await fetchCarById(carId); // Fetch car data by ID
+        setCarData(data);
+      }
+  
+      fetchData();
     }, [carId]);
-
     return (
         <>
             <Header />
@@ -50,8 +37,8 @@ const CarDetail = () => {
                         <div className="     ">
                             <div className=" flex items-center max-sm:justify-center rounded-[32px] mx-8  h-[500px] bg-prime">
                                 <div className='  px-8 '>
-                                    <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">{locationCarData.makeModel}</h1>
-                                    <p className=' text-white font-custom text-2xl  max-[900px]:w-auto '>The iconic sports car known for its timeless design and thrilling turbocharged performance.</p>
+                                    <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">{carData.makeModel}</h1>
+                                    <p className=' text-white font-custom text-2xl  max-[900px]:w-auto '>{carData.intro}</p>
                                 </div>
                             </div>
                         </div>
