@@ -11,12 +11,16 @@ import Header from './components/Header';
 import ModelViewer from "./components/ModelViewer.jsx";
 let Url = '/toyota_supra_a80_1993/scene.gltf';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
+
 
 const CarDetail = () => {
     
     const { carId } = useParams();
     const [carData, setCarData] = useState(null);
+    
+    const location = useLocation();
+    const locationCarData  = location.state?.carData;
 
     useEffect(() => {
         async function fetchCarData() {
@@ -40,14 +44,13 @@ const CarDetail = () => {
         <>
             <Header />
 
-            {carData ? (
                 <div>
 
                     <div className=' '>
                         <div className="     ">
                             <div className=" flex items-center max-sm:justify-center rounded-[32px] mx-8  h-[500px] bg-prime">
                                 <div className='  px-8 '>
-                                    <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">Toyota Supra Mk-4</h1>
+                                    <h1 className=" font-prime text-9xl max-[1200px]:text-8xl max-[750px]:text-6xl max-sm:text-4xl   uppercase text-white ">Toyota Supra MK4</h1>
                                     <p className=' text-white font-custom text-2xl  max-[900px]:w-auto '>The iconic sports car known for its timeless design and thrilling turbocharged performance.</p>
                                 </div>
                             </div>
@@ -68,11 +71,11 @@ const CarDetail = () => {
                             </h1>
                         </div>
                     </div>
-                    <div className=" overflow-hidden ">
+                    {/* <div className=" overflow-hidden ">
                         <div className=''>
                             <ModelViewer modelUrl={Url} fixedScale={fixedScale} fixedTarget={fixedTarget} />
                         </div>
-                    </div>
+                    </div> */}
                     <div className=' h-[500px] bg-prime mx-8 max-sm:h-auto max-sm:py-10   rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 max-sm:px-4 items-center '>
                         <div className=' max-[1200px]:order-2'>
                             <div >
@@ -228,11 +231,6 @@ const CarDetail = () => {
                         </div>
                     </div>
                 </div>
-            ) : (
-                <div>Loading...</div>
-            )}
-
-
 
             <Footer />
 
