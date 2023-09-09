@@ -13,7 +13,7 @@ let Url = '/toyota_supra_a80_1993/scene.gltf';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const Supra = () => {
+const CarDetail = () => {
     const fixedScale = [0.4, 0.4, 0.4];
     const fixedTarget = [0, 0, 0];
 
@@ -299,4 +299,4 @@ const Supra = () => {
     );
 };
 
-export default Supra;
+export default CarDetail;
