@@ -5,7 +5,6 @@ import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
 import 'tailwindcss/tailwind.css';
 import { FormDashboard } from '../../services/Dashboard.service.js';
 
@@ -40,6 +39,8 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   const [fixedTargetValueX, setfixedTargetValueX] = React.useState('');
   const [fixedTargetValueY, setfixedTargetValueY] = React.useState('');
   const [fixedTargetValueZ, setfixedTargetValueZ] = React.useState('');
+
+  FormDashboard(formData).then(() => { }).catch((error) => { error })
 
   React.useEffect(() => {
     setfixedTargetValue([fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
@@ -463,7 +464,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
         {activeStep === 3 && (
           <>
             <div className="grid grid-cols-2  px-10 gap-4 mt-10">
-              
+
               <div>
                 <label
                   htmlFor="modelCDN"
