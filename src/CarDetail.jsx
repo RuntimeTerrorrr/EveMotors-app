@@ -14,9 +14,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const CarDetail = () => {
-    const fixedScale = [0.4, 0.4, 0.4];
-    const fixedTarget = [0, 0, 0];
-
+    
     const { carId } = useParams();
     const [carData, setCarData] = useState(null);
 
