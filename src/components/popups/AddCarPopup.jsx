@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import 'tailwindcss/tailwind.css';
 import { FormDashboard } from '../../services/Dashboard.service.js';
+import { useNavigate } from 'react-router-dom';
 
 const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image'];
 
@@ -39,8 +40,6 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
   const [fixedTargetValueX, setfixedTargetValueX] = React.useState('');
   const [fixedTargetValueY, setfixedTargetValueY] = React.useState('');
   const [fixedTargetValueZ, setfixedTargetValueZ] = React.useState('');
-
-  FormDashboard(formData).then(() => { }).catch((error) => { error })
 
   React.useEffect(() => {
     setfixedTargetValue([fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
@@ -149,6 +148,14 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
 
     console.log('Form Data:', formData);
     setFormSubmitted(true);
+
+    FormDashboard(formData)
+    .then(() => {
+      
+    })
+    .catch((error) => {
+      console.error(error);
+  })
   };
 
 
