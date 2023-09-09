@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -14,35 +14,35 @@ const steps = ['Basic Info', 'Specification', 'Images', 'Model and Cover Image']
 const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChangeTargetX, onhandleChangeTargetY, onhandleChangeTargetZ }) => {
 
   const navigate = useNavigate();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [completed, setCompleted] = React.useState({});
+  const [activeStep, setActiveStep] = useState(0);
+  const [completed, setCompleted] = useState({});
 
-  const [makeModel, setMakeModel] = React.useState('');
-  const [variant, setVariant] = React.useState('');
-  const [registeredIn, setRegisteredIn] = React.useState('');
-  const [assembledIn, setAssembledIn] = React.useState('');
-  const [intro, setIntro] = React.useState('');
-  const [engine, setEngine] = React.useState('');
-  const [displacement, setDisplacement] = React.useState('');
-  const [transmission, setTransmission] = React.useState('');
-  const [torque, setTorque] = React.useState('');
-  const [power, setPower] = React.useState('');
-  const [topSpeed, setTopSpeed] = React.useState('');
-  const [bodyType, setBodyType] = React.useState('');
-  const [category, setCategory] = React.useState('');
-  const [imageLink1, setImageLink1] = React.useState('');
-  const [imageLink2, setImageLink2] = React.useState('');
-  const [imageLink3, setImageLink3] = React.useState('');
-  const [imageLink4, setImageLink4] = React.useState('');
-  const [coverImageUrl, setCoverImageUrl] = React.useState('');
-  const [modelCDN, setModelCDN] = React.useState('');
-  const [fixedScaleValue, setFixedScaleValue] = React.useState('');
-  const [fixedTargetValue, setfixedTargetValue] = React.useState(['', '', '']);
-  const [fixedTargetValueX, setfixedTargetValueX] = React.useState('');
-  const [fixedTargetValueY, setfixedTargetValueY] = React.useState('');
-  const [fixedTargetValueZ, setfixedTargetValueZ] = React.useState('');
+  const [makeModel, setMakeModel] = useState('');
+  const [variant, setVariant] = useState('');
+  const [registeredIn, setRegisteredIn] = useState('');
+  const [assembledIn, setAssembledIn] = useState('');
+  const [intro, setIntro] = useState('');
+  const [engine, setEngine] = useState('');
+  const [displacement, setDisplacement] = useState('');
+  const [transmission, setTransmission] = useState('');
+  const [torque, setTorque] = useState('');
+  const [power, setPower] = useState('');
+  const [topSpeed, setTopSpeed] = useState('');
+  const [bodyType, setBodyType] = useState('');
+  const [category, setCategory] = useState('');
+  const [imageLink1, setImageLink1] = useState('');
+  const [imageLink2, setImageLink2] = useState('');
+  const [imageLink3, setImageLink3] = useState('');
+  const [imageLink4, setImageLink4] = useState('');
+  const [coverImageUrl, setCoverImageUrl] = useState('');
+  const [modelCDN, setModelCDN] = useState('');
+  const [fixedScaleValue, setFixedScaleValue] = useState('');
+  const [fixedTargetValue, setfixedTargetValue] = useState(['', '', '']);
+  const [fixedTargetValueX, setfixedTargetValueX] = useState('');
+  const [fixedTargetValueY, setfixedTargetValueY] = useState('');
+  const [fixedTargetValueZ, setfixedTargetValueZ] = useState('');
 
-  React.useEffect(() => {
+  useEffect(() => {
     setfixedTargetValue([fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
   }, [fixedTargetValueX, fixedTargetValueY, fixedTargetValueZ]);
 
@@ -74,7 +74,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
     onhandleChangeTargetZ(newValue);
   }
 
-  const [formSubmitted, setFormSubmitted] = React.useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const totalSteps = () => {
     return steps.length;
@@ -627,7 +627,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
       </div>
       {allStepsCompleted() ? (
         <div className="w-full h-full flex justify-center items-center">
-          <React.Fragment>
+          <Fragment>
             <Typography sx={{ mt: 2, mb: 1, color: 'white' }}>
               All steps completed - you&apos;re finished
             </Typography>
@@ -637,10 +637,10 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
               {!formSubmitted && <Button onClick={handleSubmit}>Submit</Button>}
 
             </Box>
-          </React.Fragment>
+          </Fragment>
         </div>
       ) : (
-        <React.Fragment>
+        <Fragment>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button color="inherit" onClick={handleBack} sx={{ mr: 1, color: 'white' }}>
               Back
@@ -662,7 +662,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
                 </Button>
               ))}
           </Box>
-        </React.Fragment>
+        </Fragment>
       )}
     </Box>
   );
