@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -151,23 +151,14 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
     setFormSubmitted(true);
 
     FormDashboard(formData)
-    .then(() => {
-      navigate('/dashboard')
-    })
-    .catch((error) => {
-      console.error(error);
-  })
+      .then(() => {
+        navigate('/dashboard')
+      })
+      .catch((error) => {
+        console.error(error);
+      })
   };
-
-
-  FormDashboard(formData)
-    .then((user) => {
-      console.log(user);
-    })
-    .catch((error) => {
-      console.error(error);
-    })
-
+  
   return (
     <Box className="flex flex-col justify-between" sx={{ width: '100%', px: '20px', height: '400px' }}>
       <Stepper nonLinear activeStep={activeStep}>
