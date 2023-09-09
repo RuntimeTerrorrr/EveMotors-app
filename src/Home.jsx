@@ -24,7 +24,7 @@ const Home = () => {
     }
 
     Cars();
-  }, []);
+  }, []).isLoading(false);
 
 
   function scrollToTarget() {
