@@ -86,7 +86,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    S-Coupe
+                                                    {carData.bodyType}
                                                 </h2>
                                             </li>
                                             <li>
@@ -103,7 +103,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    2JZ-GE
+                                                    {carData.engine}
                                                 </h2>
                                             </li>
                                             <li>
@@ -120,7 +120,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    Manual
+                                                    {carData.transmission}
                                                 </h2>
                                             </li>
                                             <li>
@@ -137,7 +137,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    3.0L
+                                                    {carData.displacement}
                                                 </h2>
                                             </li>
                                             <li>
@@ -151,8 +151,8 @@ const CarDetail = () => {
                             </div>
                         </div>
                         <div className=' text-white w-[600px] max-[1330px]:w-[400px] max-[1200px]:order-1 max-[1000px]:hidden'>
-                            <h2 className=' font-custom text-6xl max-[1100px]:text-5xl font-bold pb-6'>Toyota Supra Mk-4</h2>
-                            <p className=' font-custom'>The Toyota Supra MK4 is renowned for its legendary 2JZ-GTE engine, a 3.0-liter twin-turbocharged inline-six, prized for its performance and modification capabilities among mechanics and enthusiasts.</p>
+                            <h2 className=' font-custom text-6xl max-[1100px]:text-5xl font-bold pb-6'>{carData.makeModel}</h2>
+                            <p className=' font-custom'>{carData.intro}</p>
                         </div>
                         <div className=' max-[1200px]:order-3'>
                             <div >
@@ -164,7 +164,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    480kph
+                                                    {carData.topSpeed}
                                                 </h2>
                                             </li>
                                             <li>
@@ -198,7 +198,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    840hp
+                                                    {carData.power}
                                                 </h2>
                                             </li>
                                             <li>
@@ -215,7 +215,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    480Nm
+                                                    {carData.torque}
                                                 </h2>
                                             </li>
                                             <li>
