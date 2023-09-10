@@ -91,7 +91,7 @@ const Carlisting = () => {
 
                         {getCars.map((car) => {
                             return (
-                                <Link key={car._id} to={`/car/${car._id}`}
+                                <Link key={car._id} to={`/deletecar`}
                                     state={{ carData: car }}
                                     className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E] hover:bg-prime rounded-[24px] relative flex  justify-start items-center">
                                     <div className=" absolute right-4 z-50   flex transition-all">
