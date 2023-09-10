@@ -58,10 +58,10 @@ const CarDetail = () => {
                     {/* <div className=' bg-white h-[600px] mx-8 rounded-[32px]' >
         </div> */}
                     <div className=' mx-8 mt-8 grid grid-cols-3 max-[900px]:grid-cols-1 max-[900px]:gap-y-8  gap-4 '>
-                        <div className=' h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-1 col-span-2 bg-[url(https://images.unsplash.com/photo-1603811478700-7590182b6abb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
-                        <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat max-[900px]:col-start-1 max-[900px]:col-span-2 bg-[url(https://images.unsplash.com/photo-1584610351025-1cf49565315d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)]'></div>
-                        <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat max-[900px]:col-start-1 max-[900px]:col-span-2   bg-[url(https://images.unsplash.com/photo-1603811478970-acb6e0916890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)]'></div>
-                        <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-2 col-end-4 max-[900px]:col-start-1 max-[900px]:col-span-2  bg-[url(https://images.unsplash.com/photo-1603811478698-0b1d6256f79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)]'></div>
+                        <div className=' h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-1 col-span-2'  style={{ backgroundImage: `url(${carData.imageLink1})` }}></div>
+                        <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat max-[900px]:col-start-1 max-[900px]:col-span-2 ' style={{ backgroundImage: `url(${carData.imageLink2})` }}></div>
+                        <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat max-[900px]:col-start-1 max-[900px]:col-span-2 ' style={{ backgroundImage: `url(${carData.imageLink3})` }}></div>
+                        <div className='  h-[500px] rounded-[32px] bg-center bg-cover bg-no-repeat col-start-2 col-end-4 max-[900px]:col-start-1 max-[900px]:col-span-2' style={{ backgroundImage: `url(${carData.imageLink4})` }}></div>
                     </div>
                     <div>
                         <div>
