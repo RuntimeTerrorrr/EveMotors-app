@@ -95,7 +95,7 @@ const Carlisting = () => {
                                     state={{ carData: car }}
                                     className="group h-[243px] max-[440px]:h-[280px] overflow-hidden  bg-[#1E1E1E] hover:bg-prime rounded-[24px] relative flex  justify-start items-center">
                                     <div className=" absolute right-4 z-50   flex transition-all">
-                                        <img className=" group-hover:w-96 transition-all w-64 z-50" src="supra-mk4.png" alt="" srcSet="" />
+                                        <img className=" group-hover:w-96 transition-all w-64 z-50" src={car.coverImageUrl} alt="" srcSet="" />
                                     </div>
                                     <div className=" flex h-full py-6 px-6 flex-col justify-between items-start">
                                         <h3 className="  text-4xl  font-custom font-bold uppercase text-white">{car.makeModel}</h3>
