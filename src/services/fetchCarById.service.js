@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/main/';
+const API_URL = 'https://eve-motors-server.vercel.app/main/';
 
 export const fetchCarById = async (carId) => {
   try {
