@@ -81,7 +81,7 @@ const CarDetail = () => {
                                 <div className=' grid grid-cols-2  gap-8 max-[1380px]:gap-4 '>
                                     <div className=' w-32  h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
-                                            <img src={VehicleIcon} alt="" srcset="" />
+                                            <img src={VehicleIcon} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -98,7 +98,7 @@ const CarDetail = () => {
                                     </div>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
-                                            <img src={EngineIcon} alt="" srcset="" />
+                                            <img src={EngineIcon} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -115,7 +115,7 @@ const CarDetail = () => {
                                     </div>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6'>
-                                            <img src={TransmissionIcon} alt="" srcset="" />
+                                            <img src={TransmissionIcon} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -132,7 +132,7 @@ const CarDetail = () => {
                                     </div>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28  rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
-                                            <img src={PistonIcon} alt="" srcset="" />
+                                            <img src={PistonIcon} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -159,7 +159,7 @@ const CarDetail = () => {
                                 <div className=' grid grid-cols-2 gap-8 max-[1380px]:gap-4 '>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
-                                            <img src={staringIcon} alt="" srcset="" />
+                                            <img src={staringIcon} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -176,7 +176,7 @@ const CarDetail = () => {
                                     </div>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6'>
-                                            <img src={ReloadIcon} alt="" srcset="" />
+                                            <img src={ReloadIcon} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -193,7 +193,7 @@ const CarDetail = () => {
                                     </div>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6 '>
-                                            <img src={ThunderIcom} alt="" srcset="" />
+                                            <img src={ThunderIcom} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
@@ -210,7 +210,7 @@ const CarDetail = () => {
                                     </div>
                                     <div className=' w-32 h-32 max-[1110px]:w-28 max-[1110px]:h-28 rounded-[13px] bg-white flex flex-col justify-between items-center py-4'>
                                         <div className=' w-10 h-10 max-[1110px]:w-6 max-[1110px]:h-6'>
-                                            <img src={SpiralIcom} alt="" srcset="" />
+                                            <img src={SpiralIcom} alt="" srcSet="" />
                                         </div>
                                         <ul className=' flex flex-col items-center'>
                                             <li>
