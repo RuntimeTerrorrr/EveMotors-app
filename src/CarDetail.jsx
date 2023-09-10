@@ -39,8 +39,7 @@ const CarDetail = () => {
   
       fetchData();
     }, [carId]);
-    const fixedScale = [ carData.fixedScaleValue, carData.fixedScaleValue, carData.fixedScaleValue]; // Adjust the scale as needed
-    const fixedTarget = [carData.fixedTargetValue]; // Adjust the target as needed
+    const fixedTarget = [2.5, 1.8, 1.5]; // Adjust the target as needed
     return (
         
         <>
@@ -75,7 +74,7 @@ const CarDetail = () => {
                     </div>
                     <div className=" overflow-hidden ">
                         <div className=''>
-                            <ModelViewer modelUrl={carData.modelCDN} fixedScale={fixedScale} fixedTarget={fixedTarget} />
+                            <ModelViewer modelUrl={carData.modelCDN} fixedScale={carData.fixedScaleValue} fixedTarget={carData.fixedTargetValue.split(',').map(parseFloat)} />
                         </div>
                     </div>
                     <div className=' h-[500px] bg-prime mx-8 max-sm:h-auto max-sm:py-10   rounded-[32px] flex justify-between max-[1000px]:justify-center max-[650px]:flex-col gap-4 px-20 max-[1480px]:px-10 max-sm:px-4 items-center '>
