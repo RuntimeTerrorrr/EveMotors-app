@@ -1,10 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-const DeleteCar = ({ carId, onCancel, onDelete }) => {
+const DeleteCar = ({ onCancel, onDelete }) => {
+  const { carId } = useParams();
+
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/cars/${carId}`);
+      await axios.delete(`https://eve-motors-server.vercel.app/admin/api/cars/${carId}`);
+      onDelete();
     } catch (error) {
       console.error('Error deleting car:', error);
     }
