@@ -183,7 +183,7 @@ const CarDetail = () => {
                                         <ul className=' flex flex-col items-center'>
                                             <li>
                                                 <h2 className=' font-custom font-bold'>
-                                                    3s
+                                                    {carData.zeroToHundred}
                                                 </h2>
                                             </li>
                                             <li>

@@ -151,7 +151,7 @@ const AddCarPopup = ({ onCdnLinkChange, onhandleScaleValueChange, onhandleChange
       formData.append("fixedScaleValue", fixedScaleValue);
       formData.append("fixedTargetValue", fixedTargetValue);
 
-      const response = await axios.post('https://eve-motors-server.vercel.app/admin/dashboard', formData,);
+      const response = await axios.post('http://192.168.99.137:3000/admin/dashboard', formData,);
 
       console.log('Response Data:', response.data);
       navigate('/dashboard');
