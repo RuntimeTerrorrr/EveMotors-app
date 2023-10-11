@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'https://eve-motors-server.vercel.app//main/';
+const API_URL = 'https://eve-motors-server.vercel.app/main/';
 
 const UserRegistration = async (formdata) => {
     try {
