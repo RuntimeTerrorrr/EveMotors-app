@@ -7,7 +7,7 @@ const DeleteCar = ({ onCancel, onDelete }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://192.168.99.137:3000/admin/api/cars/${carId}`);
+      await axios.delete(`https://eve-motors-server.vercel.app//admin/api/cars/${carId}`);
       onDelete();
     } catch (error) {
       console.error('Error deleting car:', error);

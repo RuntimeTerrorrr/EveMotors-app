@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://192.168.99.137:3000/admin';
+const API_URL = 'https://eve-motors-server.vercel.app//admin';
 
 export const CarDeletion = async (carId) => {
     try {
